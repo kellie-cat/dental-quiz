@@ -1,6 +1,6 @@
 // Quiz Q and As
 
-const quizData = [
+var quizData = [
   {
     question: "What is the hardest layer of tooth?",
     answerOne: "Enamel",
@@ -37,51 +37,8 @@ let score = 0;
 let i = 0;
 
 //Get the User Answer
-function getUserAnswer() {
-  let ans = undefined;
-
-  allAnswer.forEach((el) => {
-    if (el.checked) {
-      ans = el.id;
-    }
-  });
-  return ans;
+function startQuiz() {
+  console.log('Start quiz?');
 }
 
-//Disselect all answers
-function deselectans() {
-  allAnswer.forEach((el) => {
-    el.checked = false;
-  });
-}
-
-//Get the quiz data
-function getQuiz() {
-  deselectans();
-  question.textContent = quizData[i].question;
-  answerOne.textContent = quizData[i].answerOne;
-  answerTwo.innerText = quizData[i].answerTwo;
-  answerThree.innerText = quizData[i].answerThree;
-}
-
-//Move onto the next question
-function moveOn() {
-  submitButton.addEventListener('click', () => {
-    let ans = getUserAnswer();
-    if (ans) {
-      if (ans == quizData[i].correct) {
-        score++;
-      }
-    }
-    i++;
-    if (i < quizData.length) {
-      getQuiz();
-    } else {
-      alert('score :' + score);
-      location.reload();
-    }
-  });
-}
-
-getQuiz();
-moveOn();
+startQuiz();
