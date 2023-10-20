@@ -1,70 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Font awesome and Google Fonts -->
-    <script
-      src="https://kit.fontawesome.com/4fc309812e.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="assets/favicon/site.webmanifest" />
-    <title>Cavity Preventer Quiz</title>
-  </head>
+	<!-- Font awesome and Google Fonts -->
+	<script src="https://kit.fontawesome.com/4fc309812e.js" crossorigin="anonymous"></script>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/style.css" />
 
-  <body>
-    <div class="body-area">
-      <header>
-        <h1 class="heading">
-          <img src="assets/images/logo.png" alt="logo" />
-          The Cavity Preventer Quiz
-        </h1>
-      </header>
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+	<link rel="manifest" href="assets/favicon/site.webmanifest" />
+	<title>Cavity Preventer Quiz</title>
+</head>
 
-      <div class="game-area">
-        <section class="question-area"></section>
-        <section class="choice-area"></section>
-        <section class="answer-area"></section>
-        <figure class="score-area">
-          <i class="fa-solid fa-circle-check" style="color: #04c307"
-            >Correct<span>0</span></i
-          >
-          <i class="fa-solid fa-circle-xmark" style="color: #ff0000"
-            >Incorrect<span>0</span></i
-          >
-        </figure>
-      </div>
+<body>
+	<div class="body-area">
+		<header>
+			<h1 class="heading">
+				<img src="assets/images/logo.png" alt="logo" height="100" width="100" />
+				The Cavity Preventer Quiz
+			</h1>
+		</header>
 
-      <footer>
-        <div class="footer-icons"></div>
-      </footer>
-    </div>
-    <script src="assets/js/script.js"></script>
-  </body>
+		<div class="game-area">
+			<section class="question-area"></section>
+			<section class="choice-area"></section>
+			<section class="answer-area"></section>
+			<figure class="score-area">
+				<i class="fa-solid fa-circle-check" style="color: #04c307">Correct<span class="score"
+						id="correct-score">0</span></i>
+				<i class="fa-solid fa-circle-xmark" style="color: #ff0000">Incorrect<span class="score"
+						id="incorrect-score">0</span></i>
+			</figure>
+		</div>
+
+		<footer>
+			<div class="footer-icons"></div>
+		</footer>
+	</div>
+	<script src="assets/js/script.js"></script>
+</body>
+
 </html>
