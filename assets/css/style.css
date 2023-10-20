@@ -1,65 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap');
 
 .body-area {
-	background: #99E0FF;
-	font-family: "Open Sans", sans-serif;
-	width: 100%;
-	flex: 1 0 auto;
+  background: #99E0FF;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
 }
 
 header {
-	background: #FFFFFF;
-	padding: 0 1rem;
-	z-index: 99;
+  background: #FFFFFF;
+  padding: 0 1rem;
+  z-index: 99;
 }
 
 .heading {
-	text-align: center;
+  text-align: center;
 }
 
 .game-area {
-	width: 100%;
+  width: 100%;
 }
 
 .question-area {
-	margin: 0% 5% 5% 5%;
-	padding: 2%;
-	border: 2px solid #2D60B4;
-	border-radius: 4px;
+  margin: 0% 5% 5% 5%;
+  padding: 2%;
+  border: 2px solid #2D60B4;
+  border-radius: 4px;
 }
 
 .choice-area {
-	margin: 5%;
-	padding: 2%;
-	border: 2px solid #2D60B4;
-	border-radius: 4px;
+  margin: 5%;
+  padding: 2%;
+  border: 2px solid #2D60B4;
+  border-radius: 4px;
 }
 
 .answer-area {
-	margin: 5%;
-	padding: 2%;
-	border: 2px solid #2D60B4;
-	border-radius: 4px;
-	background: #04c307;
+  margin: 5%;
+  padding: 2%;
+  border: 2px solid #2D60B4;
+  border-radius: 4px;
+  background: #04c307;
 }
 
 .score-area {
-	margin: 5%;
-	padding: 2%;
-	border: 2px solid #2D60B4;
-	border-radius: 4px;
-	background: #FFFFFF;
+  margin: 5%;
+  padding: 2%;
+  border: 2px solid #2D60B4;
+  border-radius: 4px;
+  background: #FFFFFF;
 }
 
 footer {
-	background: #FFFFFF;
-	display: flex;
-	justify-content: space-evenly;
+  background: #FFFFFF;
+  font-size: 5rem;
 }
 
 .footer-icons {
-	text-align: center;
-	padding: 20px 0;
-
-	list-style-type: none;
+  display: flex;
+  padding: 2px;
+  list-style-type: none;
+  justify-content: space-evenly;
 }
