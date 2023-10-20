@@ -6,11 +6,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<!-- Font awesome and Google Fonts -->
-	<script src="https://kit.fontawesome.com/4fc309812e.js" crossorigin="anonymous"></script>
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap"
-		rel="stylesheet" />
+		rel="stylesheet">
+
+	<!-- Link CSS -->
 	<link rel="stylesheet" href="assets/css/style.css" />
 
 	<!-- Favicon -->
@@ -25,7 +28,7 @@
 	<div class="body-area">
 		<header>
 			<h1 class="heading">
-				<img src="assets/images/logo.png" alt="logo" height="100" width="100" />
+				<i class="fa-solid fa-tooth" style="color: #2c9cf2;"></i>
 				The Cavity Preventer Quiz
 			</h1>
 		</header>
@@ -53,7 +56,9 @@
 					<button class="submit-button">Submit your answer!</button>
 				</form>
 			</section>
-			<section class="answer-area"></section>
+			<section class="answer-area">
+				Answer= correct
+			</section>
 			<figure class="score-area">
 				<i class="fa-solid fa-circle-check" style="color: #04c307">Correct<span class="score"
 						id="correct-score">0</span></i>
@@ -63,9 +68,22 @@
 		</div>
 
 		<footer>
-			<div class="footer-icons"></div>
+			<ul class="footer-icons">
+				<li><a href="https://www.linkedin.com/in/kelliemcconnell" target="_blank" rel="noopener"
+						aria-label="Link to my LinkedIn profile (opens in a new tab)">
+						<i class="fa-brands fa-linkedin" style="color: #2c9cf2;"></i>
+				</li>
+				<li><a href="https://github.com/kellie-cat" target="_blank" rel="noopener"
+						aria-label="Link to my GitHub profile (opens in a new tab)">
+						<i class="fa-brands fa-square-github" style="color: #2c9cf2;"></i>
+				</li>
+			</ul>
 		</footer>
 	</div>
+
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/4fc309812e.js" crossorigin="anonymous"></script>
+	<!-- Link JavaScript -->
 	<script src="assets/js/script.js"></script>
 </body>
 
