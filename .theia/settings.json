@@ -1,5 +1,7 @@
 {
     "[html]": {
         "editor.defaultFormatter": "hookyqr.beautify"
-    }
+	},
+	"editor.defaultFormatter": "Beautify",
+	"javascript.format.enable": true
 }
