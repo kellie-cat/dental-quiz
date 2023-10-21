@@ -27,27 +27,18 @@
         The Cavity Preventer Quiz
       </h1>
     </header>
-
-    <div class="game-area">
+    <div class="game-area" id="quiz">
       <section class="question-area">
         <h1 class="question-header">Question:</h1>
-        <p class="question">What is the hardest layer of tooth?</p>
+        <div class="question">What is the hardest layer of a tooth?</div>
         <h2 class="multiple-choice-header">Choose from:</h2>
-        <form class="multiple-choice-form">
-          <div class="multiple-choice-answer " id="answer1">
-            <input type="radio" id="answer-one" name="answer" value="answer-one">
-            <label for="answer-one"></label>
-          </div>
-          <div class="multiple-choice-answer " id="answer2">
-            <input type="radio" id="answer-two" name="answer" value="answer-two">
-            <label for="answer-two"></label>
-          </div>
-          <div class="multiple-choice-answer " id="answer3">
-            <input type="radio" id="answer-three" name="answer" value="answer-three">
-            <label for="answer-three"></label>
-          </div>
-          <button class="submit-button">Submit your answer!</button>
-        </form>
+        <div class="multiple-choice-area">
+          <button class="choices" id="answer-one" name="answer" onclick="checkAnswer(0)">Enamel</button>
+          <button class="choices" id="answer-two" name="answer" onclick="checkAnswer(1)">Dentine</button>
+          <button class="choices" id="answer-three" name="answer" onclick="checkAnswer(2)">Pulp / Nerve</button>
+        </div>
+        <button class="next-question" onclick="nextQuestion(++quizData)">Click when you would like the Next
+          Question</button>
       </section>
       <section class="answer-area">
         Answer= correct
@@ -76,6 +67,7 @@
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/4fc309812e.js" crossorigin="anonymous"></script>
+
   <!-- Link to JavaScript -->
   <script src="assets/js/script.js"></script>
 </body>
