@@ -30,17 +30,19 @@
     <div class="game-area" id="quiz">
       <section class="question-area">
         <h1 class="question-header">Question:</h1>
-        <div class="question">What is the hardest layer of a tooth?</div>
+        <div class="question">
+          <p id="question-text">What is the hardest layer of a tooth?</p>
+        </div>
         <h2 class="multiple-choice-header">Choose from:</h2>
         <div class="multiple-choice-area">
-          <button class="choices" id="answer-one" name="answer" onclick="checkAnswer(0)">Enamel</button>
-          <button class="choices" id="answer-two" name="answer" onclick="checkAnswer(1)">Dentine</button>
-          <button class="choices" id="answer-three" name="answer" onclick="checkAnswer(2)">Pulp / Nerve</button>
+          <button class="choice" id="answer-one" name="answer" onclick="checkAnswer(0)">Enamel</button>
+          <button class="choice" id="answer-two" name="answer" onclick="checkAnswer(1)">Dentine</button>
+          <button class="choice" id="answer-three" name="answer" onclick="checkAnswer(2)">Pulp / Nerve</button>
         </div>
-        <button class="next-question" onclick="nextQuestion(++quizData)">Click when you would like the Next
+        <button class="next-question" onclick="nextQuestion()">Click when you would like the Next
           Question</button>
       </section>
-      <section class="answer-area">
+      <section id="feedback">
         Answer= correct
       </section>
       <figure class="score-area">

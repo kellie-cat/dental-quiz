@@ -52,8 +52,35 @@ const qandas = [
   },
 ];
 
-function pleaseHelp() {
+let currentQuestion = 0;
+let correctAnswers = 0;
+let incorrectAnswers = 0;
+
+function showQuestion() {
   console.log('Am I connected?');
+  const questionText = document.getElementById("question-text");
+  questionText.textContent = qandas[currentQuestion].question;
+
+  const options = document.querySelectorAll(".choice");
+  options.forEach((choice, index) => {
+    choice.textContent = qandas[currentQuestion].options[index];
+  });
+
+  const feedback = document.getElementById("feedback");
 }
 
-pleaseHelp();
+function checkAnswer(selected) {
+  const feedback = document.getElementById("feedback");
+  if (selected === qandas[currentQuestion].correct) {
+    feedback.innerHTML = "Correct!";
+    correctAnswers + 1;
+  } else {
+    feedback.innerHTML = "Incorrect!";
+    incorrectAnswers + 1;
+  }
+}
+
+function nextQuestion() {
+  for (let i = 0; i < qandas.length; i++)
+    console.log(qandas[i]);
+}
