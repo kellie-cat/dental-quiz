@@ -29,7 +29,7 @@ However, there are some straightforward actions that we as indiviuals can take t
     - [Imagery](#imagery)
     - [Wireframes and Google Doc](#wireframes-and-google-doc)
   - [Features](#features)
-    - [General features on each page](#general-features-on-each-page)
+    - [General features](#general-features)
     - [Future Implementations](#future-implementations)
     - [Accessibility](#accessibility)
   - [Technologies Used](#technologies-used)
@@ -118,7 +118,7 @@ Balsamiq wireframes were trialed to plan the project layout.
 ### General features
 
 The website has a landing page that is responsive up to 3500px screen sizes.
-  
+
 ![A screenshot of the quiz]()
 
 - When users first load the page, a pop up window is displayed to
@@ -129,6 +129,7 @@ The website has a landing page that is responsive up to 3500px screen sizes.
 ![A screenshot]()
 
 The Game
+
 - At the top of the page a header has a logo from Font Awesome and the Title of the Quiz.
 
 ![A screenshot of the header on a mobile device]()
@@ -144,11 +145,9 @@ The Game
 
 ![A screenshot of the footer on a mobile device]()
 
-- When the game finishes, another pop up window gives the users final score and invites them to refresh the game. 
+- When the game finishes, another pop up window gives the users final score and invites them to refresh the game.
 
 ![A screenshot]()
-
--
 
 ### Future Implementations
 
@@ -160,13 +159,13 @@ The Game
 I have tried to be inclusive for everyone when coding this website by
 
 - Using alt attributes on all images to describe them for people using screen readers.
-  
+
 - The EightShapes Contrast Grid was helpful with matching background and text colours with good contrast and making sure text is an appropriate size on all types of screen.
-  
+
 ![Colour Grid screenshot]()
-  
+
 - Using semantic HTML as much as possible.
-  
+
 - Testing the website with Wave and Lighthouse.
 
 ## Technologies Used
@@ -267,20 +266,19 @@ There are no unfixed bugs on the Cavity Prevention Quiz.
 
 - [Kera Cudmore's README.md for the Bully Book Club](https://github.com/kera-cudmore/Bully-Book-Club)
 - Love Running inspired footer
-  
+
 ### Content
 
-Content was written by Kellie McConnell.
+Content was written by Kellie McConnell BA BDentSc 2011 MFD 2013 MSc Advanced Minimum Intervention Dentistry 2020.
 
 ### Media
 
 Photos were taken
-  
+
 ### Acknowledgments
 
 Thank you so much to everyone who helped me in this project.
 
 - David Bowers, my Code Institute Mentor, thank you for your understanding and kind approach. You are a wonderful teacher.
-  
+
 - My husband, William Wong, for feeding me and giving me peace to code.
-  
