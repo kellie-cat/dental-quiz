@@ -93,8 +93,8 @@ document.addEventListener('DOMContentLoaded', function () {
       currentQuestion += 1;
     } else {
       feedback.innerHTML = "Incorrect!";
-      incorrectScore + 1;
       incrementIncorrectScore();
+      showIncorrectAlert();
     }
   }
 
@@ -112,6 +112,10 @@ document.addEventListener('DOMContentLoaded', function () {
   function incrementIncorrectScore() {
     let previousIncorrectScore = parseInt(document.getElementById("incorrect-score").innerText);
     document.getElementById("incorrect-score").innerText = ++previousIncorrectScore;
+  }
+
+  function showIncorrectAlert() {
+    alert("That's not correct. Please try again");
   }
 
   function nextQuestion() {
