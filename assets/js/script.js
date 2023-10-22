@@ -114,6 +114,9 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("incorrect-score").innerText = ++previousIncorrectScore;
   }
 
+  /** Shows an alert when an incorrect answer is given so the
+   * user knows to try again
+     */
   function showIncorrectAlert() {
     alert("That's not correct. Please try again");
   }
@@ -123,5 +126,16 @@ document.addEventListener('DOMContentLoaded', function () {
     btnOneRef.innerHTML = qandas[currentQuestion].options[0];
     btnTwoRef.innerHTML = qandas[currentQuestion].options[1];
     btnThreeRef.innerHTML = qandas[currentQuestion].options[2];
+  }
+
+  /**
+   * To reset the quiz when finish. Not working yet
+   */
+  if (qandas[i] > qandas.length) {
+    function resetQuiz() {
+      var container = document.getElementById("quiz");
+      var content = container.innerHTML;
+      container.innerHTML = content;
+    }
   }
 });
