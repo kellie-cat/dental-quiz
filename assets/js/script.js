@@ -126,13 +126,12 @@ document.addEventListener('DOMContentLoaded', function () {
     btnOneRef.innerHTML = qandas[currentQuestion].options[0];
     btnTwoRef.innerHTML = qandas[currentQuestion].options[1];
     btnThreeRef.innerHTML = qandas[currentQuestion].options[2];
-  }
 
-  /**
-   * To reset the quiz when finish. Not working yet
-   */
-  if (qandas[i] > qandas.length) {
-    function resetQuiz() {
+
+    /**
+     * To reset the quiz when finish. Not working yet
+     */
+    if (qandas >= qandas.length) {
       var container = document.getElementById("quiz");
       var content = container.innerHTML;
       container.innerHTML = content;
