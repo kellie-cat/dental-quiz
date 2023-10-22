@@ -1,7 +1,7 @@
 const questionText = document.getElementById("question-text");
 const btnOneRef = document.getElementById('answer-one');
 const btnTwoRef = document.getElementById('answer-two');
-const btnThreeRef = document.getElementById('answer-thee');
+const btnThreeRef = document.getElementById('answer-three');
 
 //Set the Q and As
 const qandas = [
@@ -27,7 +27,7 @@ const qandas = [
   },
   {
     question: "What is the biggest help to prevent tooth decay?",
-    options: ["Brushing teeth three times a day", "Changing toothpaste to a fluoride free veriety", "Reducing sugar intake from 5 times a day to once or twice a week"],
+    options: ["Brushing teeth three times a day", "Changing toothpaste to a fluoride free variety", "Reducing sugar intake from 5 times a day to once or twice a week"],
     correct: 2
   },
   {
