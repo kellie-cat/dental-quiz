@@ -1,3 +1,8 @@
+const questionText = document.getElementById("question-text");
+const btnOneRef = document.getElementById('answer-one');
+const btnTwoRef = document.getElementById('answer-two');
+const btnThreeRef = document.getElementById('answer-thee');
+
 //Set the Q and As
 const qandas = [
   {
@@ -51,36 +56,62 @@ const qandas = [
     correct: 2
   },
 ];
+document.addEventListener('DOMContentLoaded', function () {
+  let buttons = document.getElementsByTagName('button');
 
-let currentQuestion = 0;
-let correctAnswers = 0;
-let incorrectAnswers = 0;
+  for (button of buttons) {
+    button.addEventListener('click', function () {
+      if (this.getAttribute('data-type') === 'next') {
+        nextQuestion();
+      }
+      switch (this.getAttribute('data-answer')) {
+        case "0":
+          checkAnswer(0);
+          break;
+        case "1":
+          checkAnswer(1);
+          break;
+        case "2":
+          checkAnswer(2);
+          break;
+        default:
+          break;
+      }
 
-function showQuestion() {
-  console.log('Am I connected?');
-  const questionText = document.getElementById("question-text");
-  questionText.textContent = qandas[currentQuestion].question;
-
-  const options = document.querySelectorAll(".choice");
-  options.forEach((choice, index) => {
-    choice.textContent = qandas[currentQuestion].options[index];
-  });
-
-  const feedback = document.getElementById("feedback");
-}
-
-function checkAnswer(selected) {
-  const feedback = document.getElementById("feedback");
-  if (selected === qandas[currentQuestion].correct) {
-    feedback.innerHTML = "Correct!";
-    correctAnswers + 1;
-  } else {
-    feedback.innerHTML = "Incorrect!";
-    incorrectAnswers + 1;
+    });
   }
-}
+  let currentQuestion = 0;
+  let correctAnswers = 0;
+  let incorrectAnswers = 0;
 
-function nextQuestion() {
-  for (let i = 0; i < qandas.length; i++)
-    console.log(qandas[i]);
-}
+  function showQuestion() {
+    console.log('Am I connected?');
+    questionText.textContent = qandas[currentQuestion].question;
+
+    const options = document.querySelectorAll(".choice");
+    options.forEach((choice, index) => {
+      choice.textContent = qandas[currentQuestion].options[index];
+    });
+
+    const feedback = document.getElementById("feedback");
+  }
+
+  function checkAnswer(selected) {
+    const feedback = document.getElementById("feedback");
+    if (selected === qandas[currentQuestion].correct) {
+      feedback.innerHTML = "Correct!";
+      correctAnswers + 1;
+      currentQuestion += 1;
+      console.log('currentQuestion', currentQuestion);
+    } else {
+      feedback.innerHTML = "Incorrect!";
+      incorrectAnswers + 1;
+    }
+  }
+  function nextQuestion() {
+    questionText.innerHTML = qandas[currentQuestion].question;
+    btnOneRef.innerHTML = qandas[currentQuestion].options[0];
+    btnTwoRef.innerHTML = qandas[currentQuestion].options[1];
+    btnThreeRef.innerHTML = qandas[currentQuestion].options[2];
+  }
+});
