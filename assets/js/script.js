@@ -56,6 +56,7 @@ const qandas = [
     correct: 2
   },
 ];
+
 document.addEventListener('DOMContentLoaded', function () {
   let buttons = document.getElementsByTagName('button');
 
@@ -81,33 +82,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
   let currentQuestion = 0;
-  let correctAnswers = 0;
-  let incorrectAnswers = 0;
-
-  function showQuestion() {
-    console.log('Am I connected?');
-    questionText.textContent = qandas[currentQuestion].question;
-
-    const options = document.querySelectorAll(".choice");
-    options.forEach((choice, index) => {
-      choice.textContent = qandas[currentQuestion].options[index];
-    });
-
-    const feedback = document.getElementById("feedback");
-  }
+  let correctScore = 0;
+  let incorrectScore = 0;
 
   function checkAnswer(selected) {
     const feedback = document.getElementById("feedback");
     if (selected === qandas[currentQuestion].correct) {
       feedback.innerHTML = "Correct!";
-      correctAnswers + 1;
+      incrementCorrectScore();
       currentQuestion += 1;
-      console.log('currentQuestion', currentQuestion);
     } else {
       feedback.innerHTML = "Incorrect!";
-      incorrectAnswers + 1;
+      incorrectScore + 1;
+      incrementIncorrectScore();
     }
   }
+
+  function incrementCorrectScore() {
+    let previousScore = parseInt(document.getElementById("correct-score").innerText);
+    document.getElementById("correct-score").innerText = ++previousScore;
+  }
+
   function nextQuestion() {
     questionText.innerHTML = qandas[currentQuestion].question;
     btnOneRef.innerHTML = qandas[currentQuestion].options[0];
