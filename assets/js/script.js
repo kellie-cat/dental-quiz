@@ -57,6 +57,12 @@ const qandas = [
   },
 ];
 
+function welcomeAlert() {
+  alert("Welcome to the Cavity Preventer Quiz! We hope you enjoy this game. To begin, close this window, then take your time before clicking the correct answer. Once you have answered correctly, click the Next button to move onto the next question");
+}
+
+window.onload = welcomeAlert;
+
 document.addEventListener('DOMContentLoaded', function () {
   let buttons = document.getElementsByTagName('button');
 
@@ -78,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function () {
         default:
           break;
       }
-
     });
   }
   let currentQuestion = 0;
