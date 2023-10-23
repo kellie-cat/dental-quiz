@@ -64,6 +64,18 @@ function welcomeAlert() {
 window.onload = welcomeAlert;
 
 document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * Loads the 1st question from qandas
+   * */
+  function firstQuestion() {
+    questionText.innerHTML = qandas[0].question;
+    btnOneRef.innerHTML = qandas[0].options[0];
+    btnTwoRef.innerHTML = qandas[0].options[1];
+    btnThreeRef.innerHTML = qandas[0].options[2];
+  }
+
+  firstQuestion();
+
   let buttons = document.getElementsByTagName('button');
 
   for (button of buttons) {
@@ -84,11 +96,17 @@ document.addEventListener('DOMContentLoaded', function () {
         default:
           break;
       }
+      /**
+      * To reset the quiz when finish. Not working yet
+      */
+      if (qandas[i] >= qandas.length) {
+        alert("Final result!");
+        firstQuestion();
+      }
     });
   }
+
   let currentQuestion = 0;
-  let correctScore = 0;
-  let incorrectScore = 0;
 
   function checkAnswer(selected) {
     const feedback = document.getElementById("feedback");
@@ -131,15 +149,5 @@ document.addEventListener('DOMContentLoaded', function () {
     btnOneRef.innerHTML = qandas[currentQuestion].options[0];
     btnTwoRef.innerHTML = qandas[currentQuestion].options[1];
     btnThreeRef.innerHTML = qandas[currentQuestion].options[2];
-
-
-    /**
-     * To reset the quiz when finish. Not working yet
-     */
-    if (qandas >= qandas.length) {
-      var container = document.getElementById("quiz");
-      var content = container.innerHTML;
-      container.innerHTML = content;
-    }
   }
 });
