@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function reloadGame() {
-    gameArea = document.getElementsByClassName("game-area");
-    gameArea.load(window.location.href);
+    alert("Congratulations, you have finished the Cavity Preventer Quiz! Your results = . To play again, please click ok");
+    location.reload("quiz");
   }
 });
