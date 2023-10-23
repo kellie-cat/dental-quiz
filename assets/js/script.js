@@ -57,13 +57,11 @@ const qandas = [
   },
 ];
 
-function welcomeAlert() {
-  alert("Welcome to the Cavity Preventer Quiz! We hope you enjoy this game. To begin, close this window, then take your time before clicking the correct answer. Once you have answered correctly, click the Next button to move onto the next question");
-}
-
-window.onload = welcomeAlert;
-
 document.addEventListener('DOMContentLoaded', function () {
+  function welcomeAlert() {
+    alert("Welcome to the Cavity Preventer Quiz! We hope you enjoy this game. To begin, close this window, then take your time before clicking the correct answer. Once you have answered correctly, click the Next button to move onto the next question");
+  }
+  welcomeAlert();
   /**
    * Loads the 1st question from qandas
    * */
@@ -77,10 +75,11 @@ document.addEventListener('DOMContentLoaded', function () {
   firstQuestion();
 
   let buttons = document.getElementsByTagName('button');
+  let currentQuestion = 0;
 
   for (button of buttons) {
     button.addEventListener('click', function () {
-      if (this.getAttribute('data-type') === 'next') {
+      if (this.getAttribute('data-type') === 'next' && currentQuestion <= 9) {
         nextQuestion();
       }
       switch (this.getAttribute('data-answer')) {
@@ -96,17 +95,12 @@ document.addEventListener('DOMContentLoaded', function () {
         default:
           break;
       }
-      /**
-      * To reset the quiz when finish. Not working yet
-      */
-      if (qandas[i] >= qandas.length) {
-        alert("Final result!");
-        firstQuestion();
+      if (this.getAttribute('data-type') === 'next' && currentQuestion > 9) {
+        console.log("Reload game?");
+        reloadGame();
       }
     });
   }
-
-  let currentQuestion = 0;
 
   function checkAnswer(selected) {
     const feedback = document.getElementById("feedback");
@@ -149,5 +143,10 @@ document.addEventListener('DOMContentLoaded', function () {
     btnOneRef.innerHTML = qandas[currentQuestion].options[0];
     btnTwoRef.innerHTML = qandas[currentQuestion].options[1];
     btnThreeRef.innerHTML = qandas[currentQuestion].options[2];
+  }
+
+  function reloadGame() {
+    gameArea = document.getElementsByClassName("game-area");
+    gameArea.load(window.location.href);
   }
 });
