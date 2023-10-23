@@ -54,6 +54,7 @@ header {
   font-weight: 600;
   font-size: large;
   transition: all 200ms ease-in-out;
+  text-align: left;
 }
 
 .next-question {
