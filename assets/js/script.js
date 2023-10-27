@@ -139,6 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function nextQuestion() {
+    feedback.innerHTML = "Click an answer to see your result";
     questionText.innerHTML = qandas[currentQuestion].question;
     btnOneRef.innerHTML = qandas[currentQuestion].options[0];
     btnTwoRef.innerHTML = qandas[currentQuestion].options[1];
