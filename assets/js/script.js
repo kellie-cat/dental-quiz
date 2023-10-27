@@ -101,11 +101,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function checkAnswer(selected) {
     if (selected === quizData[currentQuestion].correct) {
-      feedback.innerHTML = 'Correct! <i class="fa - solid fa - circle - check" style="color: #04c307"></i>';
+      feedback.innerHTML = `
+      <i class="fa-solid fa-circle-check" style="color: #04c307"> Correct</i>
+      `;
       incrementCorrectScore();
       currentQuestion += 1;
     } else {
-      feedback.innerHTML = "Incorrect!";
+      feedback.innerHTML = `
+      <i class="fa-solid fa-circle-xmark" style="color: #ff0000"> Incorrect</i>
+            `;
       incrementIncorrectScore();
       showIncorrectAlert();
     }
@@ -160,6 +164,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function alertFinal() {
     let finalCorrectScore = parseInt(document.getElementById("correct-score").innerText);
     let finalIncorrectScore = parseInt(document.getElementById("incorrect-score").innerText);
-    alert(`Congratulations on finishing the Cavity Preventer Quiz! Final score \nCorrect answers ${finalCorrectScore} \nIncorrect answers ${finalIncorrectScore} \nTo play again please press ok`);
+    alert(`Congratulations on finishing the Cavity Preventer Quiz! \nFinal score \nCorrect answers ${finalCorrectScore} \nIncorrect answers ${finalIncorrectScore} \nTo play again please press ok`);
   }
 });
