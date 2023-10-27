@@ -6,8 +6,7 @@ const feedback = document.getElementById('feedback');
 const btnStartRef = document.getElementById('close');
 
 //Set the Quiz Data
-const quizData = [
-  {
+const quizData = [{
     question: "What is the hardest layer of tooth?",
     options: ["Enamel", "Pulp", "Dentine"],
     correct: 0
@@ -138,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /** Shows an alert when an incorrect answer is given so the
    * user knows to try again
-     */
+   */
   function showIncorrectAlert() {
     alert("That's not correct. Please try again");
   }

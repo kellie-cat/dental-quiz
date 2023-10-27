@@ -4,7 +4,7 @@ The Cavity Prevention Quiz is an educational game designed for people of all age
 The World Health Organisation in 2019 said that dental decay was the most common health condition in the world. Oral diseases disproportionally affect the poor and socially disadvantaged members of society. To provide real and meaningful change, we need health care systems that properly address these inequalities.
 However, there are some straightforward actions that we as indiviuals can take that drastically reduce our risk of these problems. This resource is one way to spread the knowledge.
 
-![Screenshot of The Cavity Prevention Quiz on Am I Responsive](docs/)
+![Screenshot of The Cavity Prevention Quiz on Am I Responsive](docs/am-i-responsive-dental-quiz.png)
 
 [View The Cavity Prevention Quiz on Github Pages](https://kellie-cat.github.io/dental-quiz/)
 
@@ -90,11 +90,9 @@ The Cavity Prevention Quiz is an interactive learning game played on one screen.
 
 ### Colour Scheme
 
-![image]()
+![image](docs/coolors-palette-pp2.png)
 
-Dental environments often use a colour scheme of blue and white to convey calmness and cleanliness, so I started with that idea and looked for a popular palette on [Coolors](https://coolors.co/) that had some contrasting colours to provide visual separation. [Coolors](https://coolors.co/palette/6f2dbd-a663cc-b298dc-b8d0eb-b9faf8) below.
-
-![image](docs/coolors-palette-2.png)
+Dental environments often use a colour scheme of blue and white to convey calmness and cleanliness, so I started with that idea and looked for a popular palette on [Coolors](https://coolors.co/) that had some contrasting colours to provide visual separation.
 
 ### Typography
 
@@ -102,52 +100,55 @@ Dental environments often use a colour scheme of blue and white to convey calmne
 I decided to use a sans-serif font for the majority of the text for accessibility for screens.
 A serif font gave some personality to the headings and added a feel of a traditional photo album.
 
-![Screenshot of fonts](docs/)
+![Screenshot of fonts](docs/fontpair-dental-quiz.png)
 
 ### Imagery
 
- [Convertio](https://convertio.co/) and compressed to improve the site loading time with [tinyPNG.com](https://tinypng.com/)
+ [Convertio](https://convertio.co/) was used to convert JPEG files to PNG.
 
 ### Wireframes and Google Doc
 
-![Balsamiq wireframe trial for PP1](docs/)
+![Balsamiq wireframe trial for PP2](docs/balsamiq-wireframe-dental-quiz.png)
 Balsamiq wireframes were trialed to plan the project layout.
 
 ## Features
 
 ### General features
 
-The website has a landing page that is responsive up to 3500px screen sizes.
+The website has a landing page, built with a mobile-first mindset and responsive up to 3500px screen sizes.
 
-![A screenshot of the quiz]()
+![A screenshot of the quiz](docs/fullscreen-tablet-landscape.png)
 
 - When users first load the page, a pop up window is displayed to
   - welcome the user and introduce the game
   - explain the purpose of the game
   - and provide instructions
 
-![A screenshot]()
+![A screenshot of welcome pop up]()
 
 The Game
 
 - At the top of the page a header has a logo from Font Awesome and the Title of the Quiz.
 
-![A screenshot of the header on a mobile device]()
+![A screenshot of the header on a mobile device](docs/mobile-header.png)
 
 - The majority of the page is the Game Area, containing
   - a Question and Answer area with 3 multiple choice answers contained in buttons
-  - a Feedback area which tells the user if they got the question correct or incorrect and an explaination of the correct answer
-  - a Score area which keeps a tally of correct and incorrect answers
 
-![A screenshot]()
+![A screenshot](docs/mobile-question-area.png)
+
+- a Feedback area which tells the user if they got the question correct or incorrect and an explaination of the correct answer
+- a Score area which keeps a tally of correct and incorrect answers
+
+![A screenshot](docs/mobile-results-feedback-area.png)
 
 - At the bottom of the page a footer contains links to other pages with more information about me and other projects with icons from Font Awesome.
 
-![A screenshot of the footer on a mobile device]()
+![A screenshot of the footer on a mobile device](docs/mobile-footer.png)
 
 - When the game finishes, another pop up window gives the users final score and invites them to refresh the game.
 
-![A screenshot]()
+![A screenshot of final pop up]()
 
 ### Future Implementations
 
@@ -162,7 +163,7 @@ I have tried to be inclusive for everyone when coding this website by
 
 - The EightShapes Contrast Grid was helpful with matching background and text colours with good contrast and making sure text is an appropriate size on all types of screen.
 
-![Colour Grid screenshot]()
+![Colour Grid screenshot](docs/contrast-grid-pp2.png)
 
 - Using semantic HTML as much as possible.
 
@@ -244,10 +245,10 @@ The website was tested as it was built on Google Chrome using Google Devtools. I
 
 HTML validator was used to check all of the HTML and the CSS on the site.
 
-![Home page]()
+![Home page](docs/html-validation-pp2.png)
 Home page validation
 
-![CSS]()
+![CSS](docs/css-validation-pp2.png)
 CSS validation
 
 ### Resolved Bugs
