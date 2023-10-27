@@ -60,14 +60,6 @@ const quizData = [{
 
 document.addEventListener('DOMContentLoaded', function () {
   /**
-   * Welcome alert
-   */
-  function welcomeAlert() {
-    alert("Welcome to the Cavity Preventer Quiz! \nWe hope you enjoy this game!\nTo begin, close this window, then take your time before clicking your chosen answer.\nFeedback will be given in the Results section.\nOnce you have answered correctly, click the Next button to move onto the next question");
-  }
-
-  welcomeAlert();
-  /**
    * Loads the 1st question from quizData
    * */
   function firstQuestion() {
