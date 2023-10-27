@@ -2,6 +2,7 @@ const questionText = document.getElementById("question-text");
 const btnOneRef = document.getElementById('answer-one');
 const btnTwoRef = document.getElementById('answer-two');
 const btnThreeRef = document.getElementById('answer-three');
+const feedback = document.getElementById("feedback");
 
 //Set the Q and As
 const qandas = [
@@ -103,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function checkAnswer(selected) {
-    const feedback = document.getElementById("feedback");
     if (selected === qandas[currentQuestion].correct) {
       feedback.innerHTML = "Correct!";
       incrementCorrectScore();
@@ -138,6 +138,11 @@ document.addEventListener('DOMContentLoaded', function () {
     alert("That's not correct. Please try again");
   }
 
+  /**
+   * Refreshes the feedback text for the next question and then
+   * loads the next question text and answer options from the qandas
+   * array
+   */
   function nextQuestion() {
     feedback.innerHTML = "Click an answer to see your result";
     questionText.innerHTML = qandas[currentQuestion].question;
@@ -147,7 +152,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function reloadGame() {
-    alert("Congratulations, you have finished the Cavity Preventer Quiz! Your results = . To play again, please click ok");
+    let finalCorrectScore = parseInt(document.getElementById("correct-score").innerText);
+    let finalIncorrectScore = parseInt(document.getElementById("incorrect-score").innerText);
+    alert(`Congratulations, you have finished the Cavity Preventer Quiz! Your results : Correct Answers = ${finalCorrectScore} Incorrect Answers = ${finalIncorrectScore}. To play again, please click ok`);
     location.reload("quiz");
   }
 });
