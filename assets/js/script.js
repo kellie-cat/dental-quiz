@@ -1,8 +1,8 @@
-const questionText = document.getElementById("question-text");
+const questionText = document.getElementById('question-text');
 const btnOneRef = document.getElementById('answer-one');
 const btnTwoRef = document.getElementById('answer-two');
 const btnThreeRef = document.getElementById('answer-three');
-const feedback = document.getElementById("feedback");
+const feedback = document.getElementById('feedback');
 
 //Set the Quiz Data
 const quizData = [
@@ -59,10 +59,6 @@ const quizData = [
 ];
 
 document.addEventListener('DOMContentLoaded', function () {
-  function welcomeAlert() {
-    alert("Welcome to the Cavity Preventer Quiz! \nWe hope you enjoy this game :) \nTo begin, close this window, then take your time before clicking your chosen answer. Feedback will be given in the Result section. \nOnce you have answered correctly, click the Next button to move onto the next question");
-  }
-  welcomeAlert();
   /**
    * Loads the 1st question from quizData
    * */
@@ -80,6 +76,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   for (button of buttons) {
     button.addEventListener('click', function () {
+      if (this.getAttribute('data-type') === 'close') {
+        function closeWelcomePopup();
+      }
       if (this.getAttribute('data-type') === 'next' && currentQuestion <= 9) {
         nextQuestion();
       }
@@ -101,6 +100,11 @@ document.addEventListener('DOMContentLoaded', function () {
         reloadGame();
       }
     });
+  }
+
+  function closeWelcomePopup {
+    let welcomePopup = document.getElementsByClassName('welcome-popup-outer');
+    welcomePopup.classList.add('hidden');
   }
 
   function checkAnswer(selected) {
@@ -159,7 +163,12 @@ document.addEventListener('DOMContentLoaded', function () {
   function reloadGame() {
     let finalCorrectScore = parseInt(document.getElementById("correct-score").innerText);
     let finalIncorrectScore = parseInt(document.getElementById("incorrect-score").innerText);
-    alert(`Congratulations, you have finished the Cavity Preventer Quiz! \nYour results : \nCorrect Answers = ${finalCorrectScore} \nIncorrect Answers = ${finalIncorrectScore}. \nTo play again, please click ok`);
+    alertFinal();
     location.reload("quiz");
   }
+
+  function alertFinal() {
+
+  }
+}
 });

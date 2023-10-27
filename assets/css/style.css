@@ -16,6 +16,55 @@ header {
   text-align: center;
 }
 
+.welcome-popup-outer {
+  position: absolute;
+  box-shadow: 5px 5px 5px #2D60B4;
+  z-index: 10000;
+  border: 2px solid #2D60B4;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  display: block;
+  margin: auto;
+}
+
+.welcome-popup-inner {
+  background-color: #FFFFFF;
+  position: relative;
+  padding: 10px;
+  z-index: 1;
+  width: 100vw;
+}
+
+.full-screen {
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.close-welcome {
+  font-size: 17px;
+  height: 25px;
+  cursor: pointer;
+  border: 2px solid #2D60B4;
+  border-radius: 4px;
+  background-color: #99E0FF;
+}
+
+.background-mask {
+  background-color: #000000;
+  opacity: 0.2;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.hidden {
+  display: none;
+}
+
 .game-area {
   width: 100%;
   font-family: "Open Sans", sans-serif;
@@ -108,7 +157,20 @@ footer {
 }
 
 @media (min-width: 500px) {
+
+  .welcome-popup-outer {}
+
   .score-area {
     flex-direction: row;
+  }
+}
+
+@media (min-width: 1500px) {
+  .welcome-popup-inner {
+    font-size: 3rem;
+  }
+
+  .close-welcome {
+    font-size: 3rem;
   }
 }
