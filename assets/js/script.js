@@ -60,7 +60,7 @@ const quizData = [
 
 document.addEventListener('DOMContentLoaded', function () {
   function welcomeAlert() {
-    alert("Welcome to the Cavity Preventer Quiz! We hope you enjoy this game. To begin, close this window, then take your time before clicking the correct answer. Once you have answered correctly, click the Next button to move onto the next question");
+    alert("Welcome to the Cavity Preventer Quiz! \nWe hope you enjoy this game :) \nTo begin, close this window, then take your time before clicking your chosen answer. Feedback will be given in the Result section. \nOnce you have answered correctly, click the Next button to move onto the next question");
   }
   welcomeAlert();
   /**
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
-   * Refreshes the feedback text for the next question and then
+   * Refreshes the feedback and explanation text for the next question and then
    * loads the next question text and answer options from the quizData
    * array
    */
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function reloadGame() {
     let finalCorrectScore = parseInt(document.getElementById("correct-score").innerText);
     let finalIncorrectScore = parseInt(document.getElementById("incorrect-score").innerText);
-    alert(`Congratulations, you have finished the Cavity Preventer Quiz! Your results : Correct Answers = ${finalCorrectScore} Incorrect Answers = ${finalIncorrectScore}. To play again, please click ok`);
+    alert(`Congratulations, you have finished the Cavity Preventer Quiz! \nYour results : \nCorrect Answers = ${finalCorrectScore} \nIncorrect Answers = ${finalIncorrectScore}. \nTo play again, please click ok`);
     location.reload("quiz");
   }
 });
