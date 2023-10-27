@@ -187,7 +187,7 @@ This website was made using JavaScript, HTML and CSS.
 
 [Font Pair](https://www.fontpair.co/all) - To find a complementary font pairing.
 
-[Font Awesome](https://fontawesome.com/) - For the icons.
+[Font Awesome](https://fontawesome.com/) - For the icons and the favicon.
 
 [Coolors](https://coolors.co/) - To choose colours that showcased the greyscale cats.
 
@@ -199,7 +199,7 @@ Google Chrome Development Tools - To test the code as I was writing it, and to t
 
 [Convertio](https://convertio.co/) - To convert images to webp format.
 
-[Favicon](https://favicon.io/) - To create favicon.
+[Favicon](https://favicon.io/) - To convert the favicon from an icon.
 
 [Am I Responsive?](https://ui.dev/amiresponsive) - To display the website on a range of screen sizes.
 
