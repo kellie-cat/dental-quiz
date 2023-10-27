@@ -4,8 +4,8 @@ const btnTwoRef = document.getElementById('answer-two');
 const btnThreeRef = document.getElementById('answer-three');
 const feedback = document.getElementById("feedback");
 
-//Set the Q and As
-const qandas = [
+//Set the Quiz Data
+const quizData = [
   {
     question: "What is the hardest layer of tooth?",
     options: ["Enamel", "Pulp", "Dentine"],
@@ -64,13 +64,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   welcomeAlert();
   /**
-   * Loads the 1st question from qandas
+   * Loads the 1st question from quizData
    * */
   function firstQuestion() {
-    questionText.innerHTML = qandas[0].question;
-    btnOneRef.innerHTML = qandas[0].options[0];
-    btnTwoRef.innerHTML = qandas[0].options[1];
-    btnThreeRef.innerHTML = qandas[0].options[2];
+    questionText.innerHTML = quizData[0].question;
+    btnOneRef.innerHTML = quizData[0].options[0];
+    btnTwoRef.innerHTML = quizData[0].options[1];
+    btnThreeRef.innerHTML = quizData[0].options[2];
   }
 
   firstQuestion();
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function checkAnswer(selected) {
-    if (selected === qandas[currentQuestion].correct) {
+    if (selected === quizData[currentQuestion].correct) {
       feedback.innerHTML = "Correct!";
       incrementCorrectScore();
       currentQuestion += 1;
@@ -140,17 +140,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /**
    * Refreshes the feedback text for the next question and then
-   * loads the next question text and answer options from the qandas
+   * loads the next question text and answer options from the quizData
    * array
    */
   function nextQuestion() {
     feedback.innerHTML = "Click an answer to see your result";
-    questionText.innerHTML = qandas[currentQuestion].question;
-    btnOneRef.innerHTML = qandas[currentQuestion].options[0];
-    btnTwoRef.innerHTML = qandas[currentQuestion].options[1];
-    btnThreeRef.innerHTML = qandas[currentQuestion].options[2];
+    questionText.innerHTML = quizData[currentQuestion].question;
+    btnOneRef.innerHTML = quizData[currentQuestion].options[0];
+    btnTwoRef.innerHTML = quizData[currentQuestion].options[1];
+    btnThreeRef.innerHTML = quizData[currentQuestion].options[2];
   }
 
+  /**
+   * Gets final score data from document and displays the final result
+   * in a pop up. When the pop up is acknowledged by the user, the
+   * quiz refreshes
+   */
   function reloadGame() {
     let finalCorrectScore = parseInt(document.getElementById("correct-score").innerText);
     let finalIncorrectScore = parseInt(document.getElementById("incorrect-score").innerText);
