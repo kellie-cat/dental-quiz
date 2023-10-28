@@ -118,19 +118,21 @@ document.addEventListener('DOMContentLoaded', function () {
   /** Gets the previous correct score from the DOM, increments it
    * by one and displays the new score
    */
-  function incrementCorrectScore() {
+  /**
+   * function incrementCorrectScore() {
     let previousScore = parseInt(document.getElementById("correct-score").innerText);
     document.getElementById("correct-score").innerText = ++previousScore;
   }
-
+*/
   /** Gets the previous incorrect score from the DOM, increments it
    * by one and displays the new score
    */
-  function incrementIncorrectScore() {
+  /**
+   * function incrementIncorrectScore() {
     let previousIncorrectScore = parseInt(document.getElementById("incorrect-score").innerText);
     document.getElementById("incorrect-score").innerText = ++previousIncorrectScore;
   }
-
+*/
   /** Shows an alert when an incorrect answer is given so the
    * user knows to try again
    */
