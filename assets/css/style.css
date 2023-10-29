@@ -101,6 +101,7 @@ header {
   background-color: #99E0FF;
 }
 
+.active,
 .choice:hover,
 .next-question:hover {
   background-color: #1F8FFF;

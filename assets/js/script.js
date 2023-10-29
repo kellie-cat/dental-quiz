@@ -92,6 +92,13 @@ document.addEventListener('DOMContentLoaded', function () {
         function closeWelcomePopup();
       }
       */
+
+     /**
+      *  Add active class to show the answer has been tried
+      */
+      if (this.getAttribute('data-answer')) {
+        this.classList.add('active');
+      }
       if (this.getAttribute('data-type') === 'next' && currentQuestion <= 9) {
         nextQuestion();
       }
@@ -181,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /**
    * Refreshes the feedback and explanation text for the next question and then
    * loads the next question text and answer options from the quizData
-   * array
+   * array, and removed active class from buttons to deselect
    */
   function nextQuestion() {
     feedback.innerHTML = "Click an answer to see your result";
@@ -193,6 +200,9 @@ document.addEventListener('DOMContentLoaded', function () {
     btnOneRef.disabled = false;
     btnTwoRef.disabled = false;
     btnThreeRef.disabled = false;
+    btnOneRef.classList.remove('active');
+    btnTwoRef.classList.remove('active');
+    btnThreeRef.classList.remove('active');
   }
 
   /**
