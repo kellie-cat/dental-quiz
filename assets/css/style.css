@@ -48,10 +48,18 @@ header {
   border-radius: 4px;
 }
 
-.welcome {}
+.welcome-header {
+  text-align: center;
+  padding: 1rem;
+}
 
 .instructions {
   padding: 1rem;
+}
+
+.centre-button {
+  display: flex;
+  justify-content: center;
 }
 
 .start-quiz {
@@ -143,7 +151,7 @@ header {
 }
 
 .score {
-  padding: 1rem;
+  padding: 0.2rem;
   margin: 1rem;
 }
 
