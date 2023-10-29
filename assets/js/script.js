@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
       `;
       incrementCorrectScore();
       currentQuestion += 1;
+      disableButtons();
     } else {
       feedback.innerHTML = `
       <i class="fa-solid fa-circle-xmark" style="color: #ff0000"> Incorrect!</i>
@@ -125,6 +126,15 @@ document.addEventListener('DOMContentLoaded', function () {
       incrementIncorrectScore();
       showIncorrectAlert();
     }
+  }
+
+  /**
+   * Disables the answer buttons so they can't duplicate answers
+   */
+  function disableButtons() {
+    btnOneRef.disabled = true;
+    btnTwoRef.disabled = true;
+    btnThreeRef.disabled = true;
   }
 
   /** Gets the previous correct score from the DOM, increments it
@@ -161,6 +171,9 @@ document.addEventListener('DOMContentLoaded', function () {
     btnOneRef.innerHTML = quizData[currentQuestion].options[0];
     btnTwoRef.innerHTML = quizData[currentQuestion].options[1];
     btnThreeRef.innerHTML = quizData[currentQuestion].options[2];
+    btnOneRef.disabled = false;
+    btnTwoRef.disabled = false;
+    btnThreeRef.disabled = false;
   }
 
   /**
