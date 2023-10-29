@@ -37,23 +37,11 @@
     <!-- Link CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <title>Cavity Preventer Quiz</title>
+    <title>Cavity Prevention Quiz</title>
   </head>
 
 <body>
   <div class="body-area">
-    <!--
-    <div class="welcome-popup-outer full-screen">
-      <div class="welcome-popup-inner">
-        <h3>Welcome to the Cavity Preventer Quiz!</h3>
-        <p>We hope you enjoy this game</p>
-        <p>To begin, close this window, then take your time before clicking your chosen answer.</p>
-        <p>Feedback will be given in the Results section.</p>
-        <p>Once you have answered correctly, click the Next button to move onto the next question</p>
-        <button class="close-welcome" data-type="close">Start game</button>
-      </div>
-      <div class="background-mask"></div>
-    </div> -->
     <header>
       <h1 class="heading">
         <a href="index.html">
@@ -81,6 +69,32 @@
             <button class="next-question" data-type="next">Next Question</button>
           </aside>
         </div>
+      </div>
+      <div class="feedback-background">
+        <section class="incorrect-answer">
+          <h2>That's not correct</h2>
+          <p>Please try a different answer</p>
+          <button class="close-modal" data-type="close">Try again</button>
+        </section>
+        <section class="final-result">
+          <h2>Congratulations</h2>
+          <p>Your final results are:</p>
+          <ul>
+            <li>Correct Answers = <span class="correct-score"></span></li>
+            <li>Incorrect Answers = <span class="incorrect-score"></span></li>
+          </ul>
+          <p>Well doneon completing the Cavity Prevention Quiz!!</p>
+          <p>If you would like to play again, please press the Play Again button.</p>
+          <p>If you would like to finish the game, please press Finish Game below.</p>
+          <p>Please come back again soon to learn more about how to prevent cavities!</p>
+          <button class="play-again" data-reload="game">
+            <i class="fa-solid fa-tooth" style="color: #ffffff;"></i>
+            Play Again</button>
+          <a href="index.html" class="home-page">
+            <i class="fa-solid fa-tooth" style="color: #ffffff;"></i>
+            Finish Game
+          </a>
+        </section>
       </div>
       <section class="feedback-area">
         <h2>Result:</h2>
