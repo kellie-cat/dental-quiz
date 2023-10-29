@@ -3,6 +3,7 @@ const btnOneRef = document.getElementById('answer-one');
 const btnTwoRef = document.getElementById('answer-two');
 const btnThreeRef = document.getElementById('answer-three');
 const feedback = document.getElementById('feedback');
+const reason = document.getElementById('reasons');
 
 //Set the Quiz Data
 const quizData = [
@@ -121,11 +122,18 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   */
 
+  /**
+   * Checks the users answer,
+   * gives feedback and, if correct, rationale, if incorrect, an alert,
+   * increments the correct or incorrect scores
+   * moves onto the next question in the quizData array
+   */
   function checkAnswer(selected) {
     if (selected === quizData[currentQuestion].correct) {
       feedback.innerHTML = `
       <i class="fa-solid fa-circle-check" style="color: #04c307"> Correct!</i >
       `;
+      reason.innerHTML = `${quizData[currentQuestion].reason}`;
       incrementCorrectScore();
       currentQuestion += 1;
       disableButtons();
@@ -177,6 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
    */
   function nextQuestion() {
     feedback.innerHTML = "Click an answer to see your result";
+    reason.innerHTML = " ";
     questionText.innerHTML = quizData[currentQuestion].question;
     btnOneRef.innerHTML = quizData[currentQuestion].options[0];
     btnTwoRef.innerHTML = quizData[currentQuestion].options[1];
@@ -196,6 +205,9 @@ document.addEventListener('DOMContentLoaded', function () {
     location.reload("quiz");
   }
 
+  /**
+   * Shows the final score as an alert and invites the user to play again
+   */
   function alertFinal() {
     let finalCorrectScore = parseInt(document.getElementById("correct-score").innerText);
     let finalIncorrectScore = parseInt(document.getElementById("incorrect-score").innerText);

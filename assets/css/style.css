@@ -102,6 +102,7 @@ header {
 }
 
 .choice:hover,
+.choice:active,
 .next-question:hover {
   background-color: #1F8FFF;
   color: #FFFFFF;
@@ -114,6 +115,11 @@ header {
   border-radius: 4px;
   min-height: 5%;
   background-color: #FFFFFF;
+}
+
+#reasons {
+  font-size: smaller;
+  min-height: 2%;
 }
 
 .score-area {
