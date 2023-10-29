@@ -37,12 +37,15 @@ header {
   color: inherit;
 }
 
-.game-area {
+#quiz-area {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin: 1% 3% 0 3%;
+}
+
+.game-area {
+  margin: 2%;
   padding: 1rem;
   border: 2px solid #012A6D;
   border-radius: 4px;
@@ -182,11 +185,11 @@ header {
 }
 
 .feedback-area {
-  margin: 1% 3%;
+  margin: 0 2% 2%;
   padding: 1rem;
   border: 2px solid #012A6D;
   border-radius: 4px;
-  min-height: 5%;
+  min-height: 10vh;
   background-color: #F5faff;
 }
 
@@ -196,7 +199,7 @@ header {
 }
 
 .score-area {
-  margin: 0 3% 1%;
+  margin: 0 2% 2%;
   padding: 0.5rem;
   border: 2px solid #012A6D;
   border-radius: 4px;
@@ -204,6 +207,8 @@ header {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+  min-height: 10vh;
+  align-items: center;
 }
 
 .score-area i {
@@ -264,32 +269,37 @@ footer {
 }
 
 /* Large devices (laptops desktops, 992px and up) */
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
 
-/* Extra large devices (large laptops and desktops, 1500px and up) */
-@media (min-width: 1500px) {
-  .game-area {
-    font-size: xx-large;
-  }
-
-  .multiple-choice-header {
+  #feedback,
+  #reasons {
     font-size: larger;
   }
 
-  .multiple-choice-area button {
-    width: 72vw;
-  }
+  /* Extra large devices (large laptops and desktops, 1500px and up) */
+  @media (min-width: 1500px) {
+    .game-area {
+      font-size: xx-large;
+    }
 
-  .choice,
-  .next-question {
-    font-size: xx-large;
-  }
+    .multiple-choice-header {
+      font-size: larger;
+    }
 
-  .next-question {
-    width: 252px;
-  }
+    .multiple-choice-area button {
+      width: 72vw;
+    }
 
-  .incorrect-answer {
-    font-size: larger;
+    .choice,
+    .next-question {
+      font-size: xx-large;
+    }
+
+    .next-question {
+      width: 252px;
+    }
+
+    .incorrect-answer {
+      font-size: larger;
+    }
   }
-}
