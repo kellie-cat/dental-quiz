@@ -111,6 +111,12 @@ document.addEventListener('DOMContentLoaded', function () {
         default:
           break;
       }
+      if (this.getAttribute('data-type') === 'close') {
+        feedbackBackground.classList.remove('flex');
+        feedbackBackground.classList.add('hide');
+        incorrectModal.classList.remove('flex');
+        incorrectModal.classList.add('hide');
+      }
       if (this.getAttribute('data-type') === 'next' && currentQuestion > 9) {
         console.log("Reload game?");
         reloadGame();
