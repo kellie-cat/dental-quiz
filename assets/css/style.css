@@ -20,7 +20,8 @@ To hide and reveal modals as called
 }
 
 .body-area {
-  background: #aadaff;
+  background: linear-gradient(to bottom right, #aadaff, #a3ace8, #b177f3);
+  background-repeat: no-repeat;
   width: 100vw;
   min-height: 100vh;
   flex-direction: column;
