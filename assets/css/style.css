@@ -1,15 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap');
 
+/*
+To remove default styling
+*/
 * {
   margin: 0;
   padding: 0;
+}
+
+/*
+To hide and reveal modals as called
+*/
+.flex {
+  display: flex;
+}
+
+.hide {
+  display: none;
 }
 
 .body-area {
   background: #aadaff;
   width: 100vw;
   min-height: 100vh;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
@@ -39,7 +52,6 @@ header {
 
 #quiz-area {
   flex: 1 0 auto;
-  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
@@ -49,6 +61,7 @@ header {
   padding: 1rem;
   border: 2px solid #012A6D;
   border-radius: 4px;
+  flex-direction: column;
 }
 
 .welcome-header {
@@ -87,10 +100,6 @@ header {
   color: #f5faff;
 }
 
-.hidden {
-  display: none;
-}
-
 .question {
   font-size: larger;
   padding: 0.75rem;
@@ -116,7 +125,6 @@ header {
   border: 1.5px solid #012A6D;
   border-radius: 4px;
   background-color: #f5faff;
-  display: flex;
   font-weight: 600;
   font-size: large;
   transition: all 200ms ease-in;
@@ -136,9 +144,8 @@ header {
   color: #ffffff;
 }
 
-.feedback-background {
+#feedback-background {
   position: fixed;
-  display: none;
   top: 0;
   left: 0;
   width: 100%;
@@ -146,14 +153,13 @@ header {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.incorrect-answer,
-.final-result {
-  display: none;
+#incorrect-answer,
+#final-result {
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   position: fixed;
-  top: 25%;
+  top: 10%;
   min-height: 300px;
   height: 70vh;
   width: 85vw;
@@ -161,7 +167,7 @@ header {
   border: 3px solid #012A6D;
   border-radius: 8px;
   color: #012A6D;
-  left: 5%;
+  left: 7.5%;
   padding: 0.2rem;
 }
 
@@ -174,7 +180,6 @@ header {
   border-radius: 4px;
   background-color: #560BAD;
   color: #FFFFFF;
-  display: flex;
   font-weight: 600;
   font-size: large;
   transition: all 200ms ease-in;
@@ -204,7 +209,6 @@ header {
   border: 2px solid #012A6D;
   border-radius: 4px;
   background: #F5faff;
-  display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   min-height: 10vh;
@@ -220,15 +224,17 @@ header {
   margin: 1rem;
 }
 
-footer {
+.footer {
   background: #f5faff;
   font-size: 2rem;
+  position: sticky;
+  top: 96vh;
 }
 
 .footer-icons {
-  display: flex;
   list-style-type: none;
   justify-content: space-evenly;
+  flex-direction: row;
 }
 
 /* small mobiles */
@@ -275,31 +281,32 @@ footer {
   #reasons {
     font-size: larger;
   }
+}
 
-  /* Extra large devices (large laptops and desktops, 1500px and up) */
-  @media (min-width: 1500px) {
-    .game-area {
-      font-size: xx-large;
-    }
-
-    .multiple-choice-header {
-      font-size: larger;
-    }
-
-    .multiple-choice-area button {
-      width: 72vw;
-    }
-
-    .choice,
-    .next-question {
-      font-size: xx-large;
-    }
-
-    .next-question {
-      width: 252px;
-    }
-
-    .incorrect-answer {
-      font-size: larger;
-    }
+/* Extra large devices (large laptops and desktops, 1500px and up) */
+@media (min-width: 1500px) {
+  .game-area {
+    font-size: xx-large;
   }
+
+  .multiple-choice-header {
+    font-size: larger;
+  }
+
+  .multiple-choice-area button {
+    width: 72vw;
+  }
+
+  .choice,
+  .next-question {
+    font-size: xx-large;
+  }
+
+  .next-question {
+    width: 252px;
+  }
+
+  .incorrect-answer {
+    font-size: larger;
+  }
+}

@@ -4,6 +4,8 @@ const btnTwoRef = document.getElementById('answer-two');
 const btnThreeRef = document.getElementById('answer-three');
 const feedback = document.getElementById('feedback');
 const reason = document.getElementById('reasons');
+const feedbackBackground = document.getElementById('feedback-background');
+const incorrectModal = document.getElementById('incorrect-answer');
 
 //Set the Quiz Data
 const quizData = [
@@ -88,13 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
   for (button of buttons) {
     button.addEventListener('click', function () {
       /**
-       * if (this.getAttribute('data-type') === 'close') {
-        function closeWelcomePopup();
-      }
-      */
-
-      /**
-       *  Add active class to show the answer has been tried
+       *  Add active class (make button blue) to show the answer has been tried
        */
       if (this.getAttribute('data-answer')) {
         this.classList.add('active');
@@ -123,13 +119,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
-   * function closeWelcomePopup {
-    let welcomePopup = document.getElementsByClassName('welcome-popup-outer');
-    welcomePopup.classList.add('hidden');
-  }
-  */
-
-  /**
    * Checks the users answer,
    * gives feedback and, if correct, rationale, if incorrect, an alert,
    * increments the correct or incorrect scores
@@ -149,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <i class="fa-solid fa-circle-xmark" style="color: #cc0000"> Incorrect!</i>
       `;
       incrementIncorrectScore();
-      showIncorrectAlert();
+      showIncorrectModal();
     }
   }
 
@@ -181,8 +170,11 @@ document.addEventListener('DOMContentLoaded', function () {
   /** Shows an alert when an incorrect answer is given so the
    * user knows to try again
      */
-  function showIncorrectAlert() {
-    alert("That's not correct. Please try again");
+  function showIncorrectModal() {
+    feedbackBackground.classList.remove('hide');
+    feedbackBackground.classList.add('flex');
+    incorrectModal.classList.remove('hide');
+    incorrectModal.classList.add('flex');
   }
 
   /**

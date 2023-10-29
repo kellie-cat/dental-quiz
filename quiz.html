@@ -50,8 +50,8 @@
         </a>
       </h1>
     </header>
-    <div id="quiz-area">
-      <div class="game-area">
+    <div id="quiz-area" class="flex">
+      <div class="game-area flex">
         <section class="question-area">
           <h2 class="question-header">Question:</h2>
           <div class="question">
@@ -61,22 +61,22 @@
         <div class="move-next-right">
           <section class="multiple-choice-area">
             <h3>Choose from:</h3>
-            <button class="choice" id="answer-one" name="answer" data-answer="0"></button>
-            <button class="choice" id="answer-two" name="answer" data-answer="1"></button>
-            <button class="choice" id="answer-three" name="answer" data-answer="2"></button>
+            <button class="choice flex" id="answer-one" name="answer" data-answer="0"></button>
+            <button class="choice flex" id="answer-two" name="answer" data-answer="1"></button>
+            <button class="choice flex" id="answer-three" name="answer" data-answer="2"></button>
           </section>
           <aside class="next-area">
-            <button class="next-question" data-type="next">Next Question</button>
+            <button class="next-question flex" data-type="next">Next Question</button>
           </aside>
         </div>
       </div>
-      <div class="feedback-background">
-        <section class="incorrect-answer">
+      <div class="hide" id="feedback-background">
+        <section class="hide" id="incorrect-answer">
           <h2>That's not correct</h2>
           <p>Please try a different answer</p>
           <button class="close-modal" data-type="close">Try again</button>
         </section>
-        <section class="final-result">
+        <section class="hide" id="final-result">
           <h2>Congratulations</h2>
           <p>Your final results are:</p>
           <ul>
@@ -101,15 +101,15 @@
         <p id="feedback">Click an answer to see your result</p>
         <p id="reasons"></p>
       </section>
-      <figure class="score-area">
+      <figure class="score-area flex">
         <i class="fa-solid fa-circle-check" style="color: #035E06"> Correct<span class="score"
             id="correct-score">0</span></i>
         <i class="fa-solid fa-circle-xmark" style="color: #cc0000"> Incorrect<span class="score"
             id="incorrect-score">0</span></i>
       </figure>
     </div>
-    <footer>
-      <ul class="footer-icons">
+    <footer class="footer">
+      <ul class="footer-icons flex">
         <li><a href="https://www.linkedin.com/in/kelliemcconnell" target="_blank" rel="noopener"
             aria-label="Link to my LinkedIn profile (opens in a new tab)"></a>
           <i class="fa-brands fa-linkedin" style="color: #0266C7;"></i>
