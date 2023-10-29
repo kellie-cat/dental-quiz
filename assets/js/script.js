@@ -219,8 +219,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let finalCorrectScore = parseInt(document.getElementById("correct-score").innerText);
     let finalIncorrectScore = parseInt(document.getElementById("incorrect-score").innerText);
 
-    document.getElementById("correct-result").innerText = finalCorrectScore;
-    document.getElementById("incorrect-result").innerText = finalIncorrectScore;
+    document.getElementById("correct-result").innerHTML = finalCorrectScore + ` <i class="fa-solid fa-circle-check" style="color: #035E06"></i>`;
+    document.getElementById("incorrect-result").innerHTML = finalIncorrectScore + ` <i class="fa-solid fa-circle-xmark" style="color: #cc0000"></i>`;
 
     feedbackBackground.classList.remove('hide');
     feedbackBackground.classList.add('flex');
