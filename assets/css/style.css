@@ -84,8 +84,7 @@ header {
 }
 
 .choice,
-.next-question,
-.submit-answer {
+.next-question {
   margin: 1%;
   padding: 1rem;
   border: 1.5px solid #2D60B4;
@@ -98,13 +97,11 @@ header {
   text-align: left;
 }
 
-.submit-answer,
 .next-question {
   background-color: #99E0FF;
 }
 
-.choice:focus,
-.submit-answer:hover,
+.choice:hover,
 .next-question:hover {
   background-color: #1F8FFF;
   color: #FFFFFF;
