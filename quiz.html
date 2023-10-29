@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,35 +13,60 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap"
     rel="stylesheet">
 
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-  <link rel="manifest" href="favicon_io/site.webmanifest">
+  <!DOCTYPE html>
+  <html lang="en">
 
-  <!-- Link CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Cavity Prevention Quiz</title>
-</head>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap"
+      rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>Cavity Preventer Quiz</title>
+  </head>
 
 <body>
   <div class="body-area">
+    <!--
+    <div class="welcome-popup-outer full-screen">
+      <div class="welcome-popup-inner">
+        <h3>Welcome to the Cavity Preventer Quiz!</h3>
+        <p>We hope you enjoy this game</p>
+        <p>To begin, close this window, then take your time before clicking your chosen answer.</p>
+        <p>Feedback will be given in the Results section.</p>
+        <p>Once you have answered correctly, click the Next button to move onto the next question</p>
+        <button class="close-welcome" data-type="close">Start game</button>
+      </div>
+      <div class="background-mask"></div>
+    </div> -->
     <header>
       <h1 class="heading">
-        <a href="index.html">
-          <i class="fa-solid fa-tooth" style="color: #2c9cf2;"></i>
-          The Cavity Prevention Quiz
-        </a>
+        <i class="fa-solid fa-tooth" style="color: #2c9cf2;"></i>
+        The Cavity Preventer Quiz
       </h1>
     </header>
     <div class="game-area" id="quiz">
       <section class="question-area">
-        <h2 class="question-header">Question:</h2>
+        <h1 class="question-header">Question:</h1>
         <div class="question">
           <p id="question-text"></p>
         </div>
-        <h3 class="multiple-choice-header">Choose from:</h3>
+        <h2 class="multiple-choice-header">Choose from:</h2>
         <div class="multiple-choice-area">
           <button class="choice" id="answer-one" name="answer" data-answer="0"></button>
           <button class="choice" id="answer-two" name="answer" data-answer="1"></button>
@@ -51,13 +76,13 @@
         <button class="next-question" data-type="next">Next Question</button>
       </section>
       <section class="feedback-area">
-        <h2>Result:</h2>
+        <h1>Result:</h1>
         <p id="feedback">Click an answer to see your result</p>
       </section>
       <figure class="score-area">
-        <i class="fa-solid fa-circle-check" style="color: #04c307"> Correct<span class="score"
+        <i class="fa-solid fa-circle-check" style="color: #04c307">Correct<span class="score"
             id="correct-score">0</span></i>
-        <i class="fa-solid fa-circle-xmark" style="color: #ff0000"> Incorrect<span class="score"
+        <i class="fa-solid fa-circle-xmark" style="color: #ff0000">Incorrect<span class="score"
             id="incorrect-score">0</span></i>
       </figure>
     </div>
@@ -65,12 +90,12 @@
     <footer>
       <ul class="footer-icons">
         <li><a href="https://www.linkedin.com/in/kelliemcconnell" target="_blank" rel="noopener"
-            aria-label="Link to my LinkedIn profile (opens in a new tab)"></a>
-          <i class="fa-brands fa-linkedin" style="color: #2c9cf2;"></i>
+            aria-label="Link to my LinkedIn profile (opens in a new tab)">
+            <i class="fa-brands fa-linkedin" style="color: #2c9cf2;"></i>
         </li>
         <li><a href="https://github.com/kellie-cat" target="_blank" rel="noopener"
-            aria-label="Link to my GitHub profile (opens in a new tab)"></a>
-          <i class="fa-brands fa-square-github" style="color: #2c9cf2;"></i>
+            aria-label="Link to my GitHub profile (opens in a new tab)">
+            <i class="fa-brands fa-square-github" style="color: #2c9cf2;"></i>
         </li>
       </ul>
     </footer>
