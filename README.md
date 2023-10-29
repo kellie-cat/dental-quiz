@@ -93,6 +93,9 @@ The Cavity Prevention Quiz is an interactive learning game played on one screen.
 ![image](docs/coolors-palette-pp2.png)
 
 Dental environments often use a colour scheme of blue and white to convey calmness and cleanliness, so I started with that idea and looked for a popular palette on [Coolors](https://coolors.co/) that had some contrasting colours to provide visual separation.
+However, I wanted a range of blues with enough lightness to provide contrast, and I wasn't finding any that I likes on the colour generators, so I made my own with [Art In Context](https://artincontext.org/color-palette-generator/).
+
+![image](docs/artincontext-colour-palette-pp2.png)
 
 ### Typography
 
@@ -189,7 +192,9 @@ This website was made using JavaScript, HTML and CSS.
 
 [Font Awesome](https://fontawesome.com/) - For the icons and the favicon.
 
-[Coolors](https://coolors.co/) - To choose colours that showcased the greyscale cats.
+[Coolors](https://coolors.co/) - For inspiration for a colour palette.
+
+[Art In Context](https://artincontext.org/color-palette-generator/) - To build a custom colour palette.
 
 [EightShapes Contrast Grid](https://contrast-grid.eightshapes.com/) - To improve accessibilty with colours.
 

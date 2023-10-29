@@ -93,9 +93,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       */
 
-     /**
-      *  Add active class to show the answer has been tried
-      */
+      /**
+       *  Add active class to show the answer has been tried
+       */
       if (this.getAttribute('data-answer')) {
         this.classList.add('active');
       }
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function checkAnswer(selected) {
     if (selected === quizData[currentQuestion].correct) {
       feedback.innerHTML = `
-      <i class="fa-solid fa-circle-check" style="color: #04c307"> Correct!</i >
+      <i class="fa-solid fa-circle-check" style="color: #038805"> Correct!</i >
       `;
       reason.innerHTML = `${quizData[currentQuestion].reason}`;
       incrementCorrectScore();
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
       disableButtons();
     } else {
       feedback.innerHTML = `
-      <i class="fa-solid fa-circle-xmark" style="color: #ff0000"> Incorrect!</i>
+      <i class="fa-solid fa-circle-xmark" style="color: #cc0000"> Incorrect!</i>
       `;
       incrementIncorrectScore();
       showIncorrectAlert();
