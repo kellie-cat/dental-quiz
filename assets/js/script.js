@@ -6,6 +6,8 @@ const feedback = document.getElementById('feedback');
 const reason = document.getElementById('reasons');
 const feedbackBackground = document.getElementById('feedback-background');
 const incorrectModal = document.getElementById('incorrect-answer');
+const finalResult = document.getElementById('final-result');
+const reloadGame = document.getElementById('game');
 
 //Set the Quiz Data
 const quizData = [
@@ -111,6 +113,9 @@ document.addEventListener('DOMContentLoaded', function () {
         default:
           break;
       }
+      /**
+       * closes incorrectModal when user clicks 'Try Again'
+       */
       if (this.getAttribute('data-type') === 'close') {
         feedbackBackground.classList.remove('flex');
         feedbackBackground.classList.add('hide');
@@ -118,7 +123,9 @@ document.addEventListener('DOMContentLoaded', function () {
         incorrectModal.classList.add('hide');
       }
       if (this.getAttribute('data-type') === 'next' && currentQuestion > 9) {
-        console.log("Reload game?");
+        alertFinal();
+      }
+      if (this.getAttribute('data-type') === 'game') {
         reloadGame();
       }
     });
@@ -127,7 +134,8 @@ document.addEventListener('DOMContentLoaded', function () {
   /**
    * Checks the users answer,
    * gives feedback and, if correct, rationale, if incorrect, an alert,
-   * increments the correct or incorrect scores
+   * increments the correct or incorrect scores,
+   * if incorrect then shows incorrect Modal, if correct
    * moves onto the next question in the quizData array
    */
   function checkAnswer(selected) {
@@ -173,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("incorrect-score").innerText = ++previousIncorrectScore;
   }
 
-  /** Shows an alert when an incorrect answer is given so the
+  /** Shows a modal when an incorrect answer is given so the
    * user knows to try again
      */
   function showIncorrectModal() {
@@ -204,21 +212,28 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
+    * Shows the final result modal and invites the user to play again
+    * or go back to the home page
+    */
+  function alertFinal() {
+    let finalCorrectScore = parseInt(document.getElementById("correct-score").innerText);
+    let finalIncorrectScore = parseInt(document.getElementById("incorrect-score").innerText);
+
+    document.getElementById("correct-result").innerText = finalCorrectScore;
+    document.getElementById("incorrect-result").innerText = finalIncorrectScore;
+
+    feedbackBackground.classList.remove('hide');
+    feedbackBackground.classList.add('flex');
+    finalResult.classList.remove('hide');
+    finalResult.classList.add('flex');
+  }
+
+  /**
    * Gets final score data from document and displays the final result
    * in a pop up. When the pop up is acknowledged by the user, the
    * quiz refreshes
    */
   function reloadGame() {
-    alertFinal();
     location.reload("quiz");
-  }
-
-  /**
-   * Shows the final score as an alert and invites the user to play again
-   */
-  function alertFinal() {
-    let finalCorrectScore = parseInt(document.getElementById("correct-score").innerText);
-    let finalIncorrectScore = parseInt(document.getElementById("incorrect-score").innerText);
-    alert(`Congratulations on finishing the Cavity Preventer Quiz! \nFinal score \nCorrect answers ${finalCorrectScore} \nIncorrect answers ${finalIncorrectScore} \nTo play again please press ok`);
   }
 });

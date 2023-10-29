@@ -189,6 +189,10 @@ header {
   text-decoration: none;
 }
 
+.final-scores {
+  list-style-type: none;
+}
+
 .feedback-area {
   margin: 0 2% 2%;
   padding: 1rem;
