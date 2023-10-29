@@ -93,7 +93,7 @@ header {
   display: flex;
   font-weight: 600;
   font-size: large;
-  transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in;
   text-align: left;
 }
 
@@ -102,7 +102,6 @@ header {
 }
 
 .choice:hover,
-.choice:active,
 .next-question:hover {
   background-color: #1F8FFF;
   color: #FFFFFF;
@@ -160,5 +159,20 @@ footer {
 
   .score-area {
     flex-direction: row;
+  }
+}
+
+@media (min-width: 1500px) {
+  .game-area {
+    font-size: xx-large;
+  }
+
+  .multiple-choice-header {
+    font-size: larger;
+  }
+
+  .choice,
+  .next-question {
+    font-size: xx-large;
   }
 }
