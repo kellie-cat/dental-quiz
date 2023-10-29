@@ -56,26 +56,34 @@
     </div> -->
     <header>
       <h1 class="heading">
-        <i class="fa-solid fa-tooth" style="color: #2c9cf2;"></i>
-        The Cavity Preventer Quiz
+        <a href="index.html">
+          <i class="fa-solid fa-tooth" style="color: #2c9cf2;"></i>
+          The Cavity Prevention Quiz
+        </a>
       </h1>
     </header>
-    <div class="game-area" id="quiz">
-      <section class="question-area">
-        <h1 class="question-header">Question:</h1>
-        <div class="question">
-          <p id="question-text"></p>
-        </div>
-        <h2 class="multiple-choice-header">Choose from:</h2>
+    <div id="quiz-area">
+      <div class="game-area">
+        <section class="question-area">
+          <h2 class="question-header">Question:</h2>
+          <div class="question">
+            <p id="question-text"></p>
+          </div>
+        </section>
         <div class="multiple-choice-area">
-          <button class="choice" id="answer-one" name="answer" data-answer="0"></button>
-          <button class="choice" id="answer-two" name="answer" data-answer="1"></button>
-          <button class="choice" id="answer-three" name="answer" data-answer="2"></button>
+          <section>
+            <h3>Choose from:</h3>
+            <button class="choice" id="answer-one" name="answer" data-answer="0"></button>
+            <button class="choice" id="answer-two" name="answer" data-answer="1"></button>
+            <button class="choice" id="answer-three" name="answer" data-answer="2"></button>
+          </section>
+          <aside>
+            <button class="next-question" data-type="next">Next Question</button>
+          </aside>
         </div>
-        <button class="next-question" data-type="next">Next Question</button>
-      </section>
+      </div>
       <section class="feedback-area">
-        <h1>Result:</h1>
+        <h2>Result:</h2>
         <p id="feedback">Click an answer to see your result</p>
         <p id="reasons"></p>
       </section>
@@ -86,16 +94,15 @@
             id="incorrect-score">0</span></i>
       </figure>
     </div>
-
     <footer>
       <ul class="footer-icons">
         <li><a href="https://www.linkedin.com/in/kelliemcconnell" target="_blank" rel="noopener"
-            aria-label="Link to my LinkedIn profile (opens in a new tab)">
-            <i class="fa-brands fa-linkedin" style="color: #2c9cf2;"></i>
+            aria-label="Link to my LinkedIn profile (opens in a new tab)"></a>
+          <i class="fa-brands fa-linkedin" style="color: #2c9cf2;"></i>
         </li>
         <li><a href="https://github.com/kellie-cat" target="_blank" rel="noopener"
-            aria-label="Link to my GitHub profile (opens in a new tab)">
-            <i class="fa-brands fa-square-github" style="color: #2c9cf2;"></i>
+            aria-label="Link to my GitHub profile (opens in a new tab)"></a>
+          <i class="fa-brands fa-square-github" style="color: #2c9cf2;"></i>
         </li>
       </ul>
     </footer>
