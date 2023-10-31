@@ -76,6 +76,8 @@ const quizData = [
 document.addEventListener('DOMContentLoaded', function () {
   let buttons = document.getElementsByTagName('button');
   let currentQuestion = 0;
+  shuffleQuizData();
+  loadQuestion();
 
   for (button of buttons) {
     button.addEventListener('click', function () {
@@ -147,7 +149,19 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
-  * Loads the 1st question from quizData
+   * Shuffles the quizData array to make the quiz more enjoyable for returning users
+   */
+  function shuffleQuizData() {
+    for (let i = quizData.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      let k = quizData[i];
+      quizData[i] = quizData[j];
+      quizData[j] = k;
+    }
+  }
+
+  /**
+  * Loads the questions and answers from quizData
   * */
   function loadQuestion() {
     questionText.innerHTML = quizData[currentQuestion].question;
@@ -155,8 +169,6 @@ document.addEventListener('DOMContentLoaded', function () {
     btnTwoRef.innerHTML = quizData[currentQuestion].options[1];
     btnThreeRef.innerHTML = quizData[currentQuestion].options[2];
   }
-
-  loadQuestion();
 
   /**
    * Disables the answer buttons so they can't duplicate answers
