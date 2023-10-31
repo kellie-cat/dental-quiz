@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
        *  Add active class (make button blue) to show the answer has been tried
        */
       if (this.getAttribute('data-answer')) {
-        this.classList.add('active');
+        this.classList.add('active', 'disabled');
       }
       if (this.getAttribute('data-type') === 'next' && currentQuestion <= 9) {
         nextQuestion();
@@ -206,9 +206,9 @@ document.addEventListener('DOMContentLoaded', function () {
     btnOneRef.disabled = false;
     btnTwoRef.disabled = false;
     btnThreeRef.disabled = false;
-    btnOneRef.classList.remove('active');
-    btnTwoRef.classList.remove('active');
-    btnThreeRef.classList.remove('active');
+    btnOneRef.classList.remove('active', 'disabled');
+    btnTwoRef.classList.remove('active', 'disabled');
+    btnThreeRef.classList.remove('active', 'disabled');
   }
 
   /**

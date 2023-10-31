@@ -145,6 +145,10 @@ header {
   color: #ffffff;
 }
 
+.disabled {
+  pointer-events: none;
+}
+
 #feedback-background {
   position: fixed;
   top: 0;
