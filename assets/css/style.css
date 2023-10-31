@@ -172,6 +172,7 @@ header {
   color: #012A6D;
   left: 7.5%;
   padding: 0.2rem;
+  font-size: larger;
 }
 
 .close-modal,
@@ -194,6 +195,7 @@ header {
 
 .final-scores {
   list-style-type: none;
+  font-size: larger;
 }
 
 .feedback-area {
