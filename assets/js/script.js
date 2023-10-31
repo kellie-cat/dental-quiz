@@ -74,18 +74,6 @@ const quizData = [
 ];
 
 document.addEventListener('DOMContentLoaded', function () {
-  /**
-   * Loads the 1st question from quizData
-   * */
-  function firstQuestion() {
-    questionText.innerHTML = quizData[0].question;
-    btnOneRef.innerHTML = quizData[0].options[0];
-    btnTwoRef.innerHTML = quizData[0].options[1];
-    btnThreeRef.innerHTML = quizData[0].options[2];
-  }
-
-  firstQuestion();
-
   let buttons = document.getElementsByTagName('button');
   let currentQuestion = 0;
 
@@ -99,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       if (this.getAttribute('data-type') === 'next' && currentQuestion <= 9) {
         nextQuestion();
+        loadQuestion();
       }
       switch (this.getAttribute('data-answer')) {
         case "0":
@@ -158,6 +147,18 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
+  * Loads the 1st question from quizData
+  * */
+  function loadQuestion() {
+    questionText.innerHTML = quizData[currentQuestion].question;
+    btnOneRef.innerHTML = quizData[currentQuestion].options[0];
+    btnTwoRef.innerHTML = quizData[currentQuestion].options[1];
+    btnThreeRef.innerHTML = quizData[currentQuestion].options[2];
+  }
+
+  loadQuestion();
+
+  /**
    * Disables the answer buttons so they can't duplicate answers
    */
   function disableButtons() {
@@ -205,10 +206,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function nextQuestion() {
     feedback.innerHTML = "Click an answer to see your result";
     reason.innerHTML = " ";
-    questionText.innerHTML = quizData[currentQuestion].question;
-    btnOneRef.innerHTML = quizData[currentQuestion].options[0];
-    btnTwoRef.innerHTML = quizData[currentQuestion].options[1];
-    btnThreeRef.innerHTML = quizData[currentQuestion].options[2];
     btnOneRef.disabled = false;
     btnTwoRef.disabled = false;
     btnThreeRef.disabled = false;
