@@ -161,6 +161,7 @@ header {
   justify-content: space-evenly;
   align-items: center;
   position: fixed;
+  z-index: 999;
   top: 10%;
   min-height: 300px;
   height: 70vh;
@@ -202,6 +203,44 @@ header {
   border-radius: 4px;
   min-height: 10vh;
   background-color: #F5faff;
+}
+
+#feedback {
+  padding: .5em 1em;
+}
+
+/* subtle zoom to attention and then back */
+.pop-outin {
+  animation: 2s anim-popoutin ease;
+  z-index: 2;
+  position: static;
+}
+
+@keyframes anim-popoutin {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+
+  25% {
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    /* animate nothing to add pause at the end of animation */
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+  }
 }
 
 #reasons {

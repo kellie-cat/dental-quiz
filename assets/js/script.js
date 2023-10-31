@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function checkAnswer(selected) {
     if (selected === quizData[currentQuestion].correct) {
       feedback.innerHTML = `
-      <i class="fa-solid fa-circle-check" style="color: #035E06"> Correct!</i >
+      <i class="fa-solid fa-circle-check pop-outin" style="color: #035E06"> Correct!</i >
       `;
       reason.innerHTML = `${quizData[currentQuestion].reason}`;
       incrementCorrectScore();
