@@ -74,7 +74,7 @@ header {
   padding: 1rem;
 }
 
-.centre-button {
+.center-start-quiz {
   display: flex;
   justify-content: center;
 }
@@ -89,11 +89,12 @@ header {
   padding: 1rem;
   border: 1.5px solid #012A6D;
   border-radius: 4px;
+  display: flex;
 }
 
 .start-quiz a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
 .start-quiz:hover {

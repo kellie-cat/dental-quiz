@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function disableIncorrectRef() {
-    var incorrectRef = document.querySelector('.active');
+    let incorrectRef = document.querySelector('.active');
     incorrectRef.disabled = true;
   }
 
