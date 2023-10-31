@@ -34,14 +34,14 @@ header {
   background: #f5faff;
   z-index: 99;
   font-family: 'Montserrat', sans-serif;
-  min-height: 10vh;
+  min-height: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .heading {
-  padding: 1rem;
+  padding: 0.7rem;
   text-align: center;
   color: #000000;
 }
