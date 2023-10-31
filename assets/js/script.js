@@ -153,6 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
       `;
       incrementIncorrectScore();
       showIncorrectModal();
+      disableIncorrectRef();
     }
   }
 
@@ -163,6 +164,11 @@ document.addEventListener('DOMContentLoaded', function () {
     btnOneRef.disabled = true;
     btnTwoRef.disabled = true;
     btnThreeRef.disabled = true;
+  }
+
+  function disableIncorrectRef() {
+    var incorrectRef = document.querySelector('.active');
+    incorrectRef.disabled = true;
   }
 
   /** Gets the previous correct score from the DOM, increments it
@@ -206,9 +212,9 @@ document.addEventListener('DOMContentLoaded', function () {
     btnOneRef.disabled = false;
     btnTwoRef.disabled = false;
     btnThreeRef.disabled = false;
-    btnOneRef.classList.remove('active', 'disabled');
-    btnTwoRef.classList.remove('active', 'disabled');
-    btnThreeRef.classList.remove('active', 'disabled');
+    btnOneRef.classList.remove('active');
+    btnTwoRef.classList.remove('active');
+    btnThreeRef.classList.remove('active');
   }
 
   /**
