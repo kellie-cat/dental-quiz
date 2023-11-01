@@ -6,6 +6,7 @@ const feedback = document.getElementById('feedback');
 const reason = document.getElementById('reasons');
 const feedbackBackground = document.getElementById('feedback-background');
 const incorrectModal = document.getElementById('incorrect-answer');
+const btnNextRef = document.getElementById('next-button');
 const finalResult = document.getElementById('final-result');
 const reloadGame = document.getElementById('game');
 
@@ -113,7 +114,10 @@ document.addEventListener('DOMContentLoaded', function () {
         incorrectModal.classList.remove('flex');
         incorrectModal.classList.add('hide');
       }
-      if (this.getAttribute('data-type') === 'next' && currentQuestion > 9) {
+      if (this.getAttribute('data-type') === 'next' && currentQuestion >= 9) {
+        btnNextRef.innerHTML = "Finish the Game!";
+      }
+      if (this.getAttribute('data-type') === 'next' && currentQuestion >= 10) {
         alertFinal();
       }
       if (this.getAttribute('data-type') === 'game') {
