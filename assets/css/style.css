@@ -138,6 +138,10 @@ header {
   text-align: left;
 }
 
+button:disabled {
+  cursor: not-allowed;
+}
+
 .next-question {
   background-color: #560BAD;
   width: 165px;
@@ -148,7 +152,7 @@ header {
   border-radius: 4px;
   font-weight: 600;
   font-size: 1em;
-  transition: all 200ms ease-in;
+  transition: all 200ms ease-in-out;
   text-align: left;
 }
 
