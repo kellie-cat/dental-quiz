@@ -8,9 +8,6 @@ However, there are some straightforward actions that we as indiviuals can take t
 
 [View The Cavity Prevention Quiz on Github Pages](https://kellie-cat.github.io/dental-quiz/)
 
-(![GitHub Gist last commit](https://img.shields.io/github/gist/last-commit/:gistId)
-![GitHub contributors](https://img.shields.io/github/:contributors/:kellie-cat/:dental-quiz)
-
 ---
 
 ## CONTENTS
