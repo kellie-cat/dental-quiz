@@ -8,8 +8,8 @@ However, there are some straightforward actions that we as indiviuals can take t
 
 [View The Cavity Prevention Quiz on Github Pages](https://kellie-cat.github.io/dental-quiz/)
 
-![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/kellie-cat/)
-![GitHub contributors](https://img.shields.io/github/contributors/kellie-cat/)
+(![GitHub Gist last commit](https://img.shields.io/github/gist/last-commit/:gistId)
+![GitHub contributors](https://img.shields.io/github/:contributors/:kellie-cat/:dental-quiz)
 
 ---
 
@@ -112,7 +112,7 @@ Balsamiq wireframes were trialed to plan the project layout.
 
 The website has a landing page and a quiz page, built with a mobile-first mindset and responsive up to 3500px screen sizes.
 
-![A screenshot of the home page](docs/fullscreen-tablet-landscape.png)
+![A screenshot of the home page](docs/pp2-welcome-page-laptop.png)
 
 - When users first load the page, the home page is displayed to
   - welcome the user and introduce the game
@@ -123,30 +123,38 @@ The website has a landing page and a quiz page, built with a mobile-first mindse
   - the header has a tooth, setting the theme for the quiz
   - and the foooter has links to LinkedIn and GitHub, which open in a new tab, incase anyone would like to find out more about me
 
-![A screenshot of the header on a mobile device](docs/mobile-header.png)
-![A screenshot of the footer on a mobile device](docs/mobile-footer.png)
+![A screenshot of the header on a mobile device](docs/pp2-header-mobile.png)
+![A screenshot of the footer on a mobile device](docs/pp2-footer-mobile.png)
 
-The Game Page
+The Quiz Page
 Again the header and footer appear, familiar to the user. On this page, the header is also an anchor tag, linking the user back to the home page.
+
+![A screenshot of the quiz page](docs/pp2-quiz-page-laptop.png)
 
 - The majority of the page is the Game Area, containing
   - a Question and Answer area with 3 multiple choice answers contained in buttons
 
-![A screenshot](docs/mobile-question-area.png)
+![A screenshot of the question area](docs/pp2-question-area.png)
 
 - a Feedback area which tells the user if they got the question correct or incorrect and an explaination of the correct answer
+  
+![A screenshot of the feedback area](docs/pp2-feedback-correct.png)
+
 - if an incorrect answer is given then a window opens to warn the user that answer was not correct and a background container hides the quiz until the user closes the incorrect answer window
   
-![A screenshot](docs/mobile-question-area.png)
+![A screenshot of the incorrect window](docs/pp2-incorrect-window-mobile.png)
 
 - if the user answers incorrectly, they cannot move onto the next question, becuase the aim of the game is to get information across. They have to keep trying until they find the right answer and get a short explaination
+
+![A screenshot of an incorrect answer highlighted](docs/pp2-game-area-laptop-incorrect.png)
+
 - a Score area which keeps a tally of correct and incorrect answers
 
-![A screenshot](docs/mobile-results-feedback-area.png)
+![A screenshot of the score area](docs/pp2-score-area-tablet.png)
 
 - When the game finishes, another window gives the users final score and invites them to refresh the game.
 
-![A screenshot of final results]()
+![A screenshot of final results](docs/pp2-final-result-mobile.png)
 
 ### Future Implementations
 
