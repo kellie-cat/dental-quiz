@@ -24,10 +24,12 @@ To hide and reveal modals as called
   background-repeat: no-repeat;
   width: 100vw;
   min-height: 100vh;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
   font-family: "Opens Sans", sans-serif;
+  font-size: 100%;
 }
 
 header {
@@ -41,7 +43,7 @@ header {
 }
 
 .heading {
-  padding: 0.7rem;
+  padding: 0.3rem;
   text-align: center;
   color: #000000;
 }
@@ -55,9 +57,10 @@ header {
   flex: 1 0 auto;
   flex-direction: column;
   justify-content: space-evenly;
+  font-size: 1em;
 }
 
-.game-area {
+.welcome-area {
   margin: 2%;
   padding: 1rem;
   border: 2px solid #012A6D;
@@ -83,7 +86,7 @@ header {
   background-color: #560BAD;
   color: #f5faff;
   font-weight: 600;
-  font-size: large;
+  font-size: inherit;
   transition: all 200ms ease-in;
   margin: 1%;
   padding: 1rem;
@@ -102,41 +105,51 @@ header {
   color: #f5faff;
 }
 
+.game-area {
+  margin: 1%;
+  padding: 0.5rem;
+  border: 2px solid #012A6D;
+  border-radius: 4px;
+  flex-direction: column;
+}
+
+.question-area {
+  padding: 0.5rem 0.5rem 0;
+}
+
 .question {
-  font-size: larger;
   padding: 0.75rem;
-}
-
-#question-text {
-  margin-left: -10px;
-}
-
-.multiple-choice-header {
-  font-size: medium;
 }
 
 .multiple-choice-area button {
   min-width: 200px;
-  width: 100%;
+  width: 98%;
 }
 
-.choice,
-.next-question {
-  margin: 1%;
+.choice {
+  margin: 1% 0;
   padding: 1rem;
   border: 1.5px solid #012A6D;
   border-radius: 4px;
   background-color: #f5faff;
   font-weight: 600;
-  font-size: large;
+  font-size: 1em;
   transition: all 200ms ease-in;
   text-align: left;
 }
 
 .next-question {
   background-color: #560BAD;
-  width: 158px;
+  width: 165px;
   color: #F5FaFF;
+  padding: 1rem;
+  margin: 2% 2% 1% 0;
+  border: 1.5px solid #012A6D;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1em;
+  transition: all 200ms ease-in;
+  text-align: left;
 }
 
 .active,
@@ -163,7 +176,7 @@ header {
   position: fixed;
   z-index: 99;
   opacity: 1;
-  top: 10%;
+  top: 12%;
   min-height: 300px;
   height: 70vh;
   width: 85vw;
@@ -171,9 +184,10 @@ header {
   border: 3px solid #012A6D;
   border-radius: 8px;
   color: #012A6D;
-  left: 7.5%;
+  left: 4%;
   padding: 0.5rem;
-  font-size: larger;
+  font-size: 1em;
+  text-align: center;
 }
 
 .close-modal,
@@ -186,7 +200,7 @@ header {
   background-color: #560BAD;
   color: #FFFFFF;
   font-weight: 600;
-  font-size: large;
+  font-size: inherit;
   transition: all 200ms ease-in;
 }
 
@@ -196,11 +210,11 @@ header {
 
 .final-scores {
   list-style-type: none;
-  font-size: larger;
+  font-size: 1.5em;
 }
 
 .feedback-area {
-  margin: 0 2% 2%;
+  margin: 0 1% 1%;
   padding: 1rem;
   border: 2px solid #012A6D;
   border-radius: 4px;
@@ -247,12 +261,12 @@ header {
 }
 
 #reasons {
-  font-size: smaller;
+  font-size: 0.8em;
   min-height: 2%;
 }
 
 .score-area {
-  margin: 0 2% 2%;
+  margin: 0 1% 1%;
   padding: 0.5rem;
   border: 2px solid #012A6D;
   border-radius: 4px;
@@ -274,9 +288,9 @@ header {
 
 .footer {
   background: #f5faff;
-  font-size: 2rem;
-  position: sticky;
-  top: 96vh;
+  font-size: 2em;
+  width: 100vw;
+  margin-top: auto;
 }
 
 .footer-icons {
@@ -285,11 +299,8 @@ header {
   flex-direction: row;
 }
 
-/* small mobiles */
+/* Small mobiles */
 @media (min-width: 500px) {
-
-  .welcome-popup-outer {}
-
   .multiple-choice-area {
     display: flex;
     flex-direction: column;
@@ -304,11 +315,17 @@ header {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 768px) {
+  .welcome-area {
+    padding: 2rem;
+    font-size: 1.5em;
+  }
+
   .move-next-right {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    margin: 1%;
   }
 
   .multiple-choice-area button {
@@ -317,44 +334,58 @@ header {
   }
 
   .next-question {
-    width: 158px;
-    margin-bottom: 5px;
+    width: 165px;
+    margin: 3%;
+  }
+
+  #incorrect-answer {
+    left: 6%;
   }
 }
 
 /* Large devices (laptops desktops, 992px and up) */
 @media (min-width: 992px) {
+  .body-area {
+    font-size: 1.5em;
+  }
 
-  #feedback,
-  #reasons {
-    font-size: larger;
+  .multiple-choice-area button {
+    width: 58vw;
+  }
+
+  .choice,
+  .next-question {
+    font-size: 1em;
+    width: 298px;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1500px and up) */
 @media (min-width: 1500px) {
-  .game-area {
-    font-size: xx-large;
-  }
-
-  .multiple-choice-header {
-    font-size: larger;
+  .body-area {
+    font-size: 2em;
   }
 
   .multiple-choice-area button {
-    width: 72vw;
-  }
-
-  .choice,
-  .next-question {
-    font-size: xx-large;
+    width: 70vw;
   }
 
   .next-question {
-    width: 252px;
+    width: 295px;
   }
 
-  .incorrect-answer {
-    font-size: larger;
+  #incorrect-answer {
+    font-size: 1.5em;
+  }
+}
+
+/* Super large devices (monitors, 2500px and up) */
+@media (min-width: 2500px) {
+  .body-area {
+    font-size: 3rem;
+  }
+
+  .next-question {
+    width: 440px;
   }
 }
