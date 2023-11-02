@@ -8,7 +8,6 @@ const feedbackBackground = document.getElementById('feedback-background');
 const incorrectModal = document.getElementById('incorrect-answer');
 const btnNextRef = document.getElementById('next-button');
 const finalResult = document.getElementById('final-result');
-const reloadGame = document.getElementById('game');
 
 //Set the Quiz Data
 const quizData = [
@@ -80,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
   shuffleQuizData();
   loadQuestion();
 
-  for (button of buttons) {
+  for (var button of buttons) {
     button.addEventListener('click', function () {
       /**
        *  Add active class (make button blue) to show the answer has been tried
