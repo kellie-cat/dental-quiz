@@ -28,6 +28,8 @@ However, there are some straightforward actions that we as indiviuals can take t
     - [Wireframes and Google Doc](#wireframes-and-google-doc)
   - [Features](#features)
     - [General features](#general-features)
+      - [The Welcome Page](#the-welcome-page)
+      - [The Quiz Page](#the-quiz-page)
     - [Future Implementations](#future-implementations)
     - [Accessibility](#accessibility)
   - [Technologies Used](#technologies-used)
@@ -93,6 +95,9 @@ However, I wanted a range of blues with enough lightness to provide contrast, an
 
 ![image](docs/artincontext-colour-palette-pp2.png)
 
+I then added some interest to the background with a pastel colour gradient.
+As the contrast was not ideal with the very pale blue, I changed this to white.
+
 ### Typography
 
 [Google Fonts](https://fonts.google.com/) was used for the fonts and [Font Pair](https://www.fontpair.co/all) helped pick a pair that complemented each other.
@@ -112,6 +117,8 @@ Balsamiq wireframes were trialed to plan the project layout.
 
 The website has a landing page and a quiz page, built with a mobile-first mindset and responsive up to 3500px screen sizes.
 
+#### The Welcome Page
+
 ![A screenshot of the home page](docs/pp2-welcome-page-laptop.png)
 
 - When users first load the page, the home page is displayed to
@@ -124,19 +131,27 @@ The website has a landing page and a quiz page, built with a mobile-first mindse
   - and the foooter has links to LinkedIn and GitHub, which open in a new tab, incase anyone would like to find out more about me
 
 ![A screenshot of the header on a mobile device](docs/pp2-header-mobile.png)
+
 ![A screenshot of the footer on a mobile device](docs/pp2-footer-mobile.png)
 
-The Quiz Page
-Again the header and footer appear, familiar to the user. On this page, the header is also an anchor tag, linking the user back to the home page.
+#### The Quiz Page
+
+Again the header and footer appear, familiar to the user.
+On this page, the header is also an anchor tag, linking the user back to the home page.
 
 ![A screenshot of the quiz page](docs/pp2-quiz-page-laptop.png)
 
-- The majority of the page is the Game Area, containing
-  - a Question and Answer area with 3 multiple choice answers contained in buttons
+The majority of the page is the Game Area, containing
+
+- a Question and Answer area
+  - with 3 multiple choice answers contained in buttons
+  - a different coloured button to move to the next page
 
 ![A screenshot of the question area](docs/pp2-question-area.png)
 
-- a Feedback area which tells the user if they got the question correct or incorrect and an explaination of the correct answer
+- a Feedback area which
+  - tells the user if they got the question correct or incorrect
+  - and when they answer correctly, an explaination of the correct answer appears
   
 ![A screenshot of the feedback area](docs/pp2-feedback-correct.png)
 
@@ -152,20 +167,25 @@ Again the header and footer appear, familiar to the user. On this page, the head
 
 ![A screenshot of the score area](docs/pp2-score-area-tablet.png)
 
-- When the game finishes, another window gives the users final score and invites them to refresh the game.
+- When the game finishes, another window opens to
+  - give the users their final score
+  - along with some personalised feedback
+  - and invites them to refresh the game
 
 ![A screenshot of final results](docs/pp2-final-result-mobile.png)
 
 ### Future Implementations
 
-- If time allowed, I would like to have a progress bar displayed so the player could tell how many questions they had to go.
-- An 'easy', 'moderate' and 'difficult' mode would be helpful to make the game even more useful for people of different knowledge levels.
+1. If time allowed, I would like to have a progress bar displayed so the player could tell how many questions they had to go.
+2. An 'easy', 'moderate' and 'difficult' mode would be helpful to make the game even more useful for people of different knowledge levels.
+3. Scrambling the order of the answers would also make the game more helpful for repeat users.
+4. Adding game sounds and animations would increase interest and novelty.
 
 ### Accessibility
 
 I have tried to be inclusive for everyone when coding this website by
 
-- Using alt attributes on all images to describe them for people using screen readers.
+- Using aria labels when appropriate for people using screen readers.
 
 - The EightShapes Contrast Grid was helpful with matching background and text colours with good contrast and making sure text is an appropriate size on all types of screen.
 
