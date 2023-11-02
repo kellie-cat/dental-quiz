@@ -19,14 +19,12 @@ However, there are some straightforward actions that we as indiviuals can take t
   - [CONTENTS](#contents)
   - [User Experience (UX)](#user-experience-ux)
     - [Key information for the site](#key-information-for-the-site)
-    - [User Stories](#user-stories)
       - [Goals](#goals)
       - [First Time User Goals](#first-time-user-goals)
       - [Returning Visitor Goals](#returning-visitor-goals)
   - [Design](#design)
     - [Colour Scheme](#colour-scheme)
     - [Typography](#typography)
-    - [Imagery](#imagery)
     - [Wireframes and Google Doc](#wireframes-and-google-doc)
   - [Features](#features)
     - [General features](#general-features)
@@ -46,7 +44,6 @@ However, there are some straightforward actions that we as indiviuals can take t
   - [Credits](#credits)
     - [Code Used](#code-used)
     - [Content](#content)
-    - [Media](#media)
     - [Acknowledgments](#acknowledgments)
 
 ---
@@ -58,13 +55,12 @@ The Cavity Prevention Quiz is an interactive learning game played on one screen.
 ### Key information for the site
 
 - A header with a title introducing the page and a logo.
-- A quiz area with questions and multiple choice answers that submit and give feedback when pressed.
+- A welcome page with instructions for the new user and a button to commence playing.
+- A quiz page with questions and multiple choice answers that submit and give feedback when pressed.
 - A button to move onto the next question.
 - A score tally area.
-- A pop up at the end to give a final score and invite the user to refresh the game to play again.
+- A pop up at the end to give a final score and feedback and invite the user to refresh the game to play again.
 - Links to find out more about me include my LinkedIn and GitHub profiles which open in a new tab.
-
-### User Stories
 
 #### Goals
 
@@ -105,10 +101,6 @@ A serif font gave some personality to the headings and added a feel of a traditi
 
 ![Screenshot of fonts](docs/fontpair-dental-quiz.png)
 
-### Imagery
-
- [Convertio](https://convertio.co/) was used to convert JPEG files to PNG.
-
 ### Wireframes and Google Doc
 
 ![Balsamiq wireframe trial for PP2](docs/balsamiq-wireframe-dental-quiz.png)
@@ -118,22 +110,24 @@ Balsamiq wireframes were trialed to plan the project layout.
 
 ### General features
 
-The website has a landing page, built with a mobile-first mindset and responsive up to 3500px screen sizes.
+The website has a landing page and a quiz page, built with a mobile-first mindset and responsive up to 3500px screen sizes.
 
-![A screenshot of the quiz](docs/fullscreen-tablet-landscape.png)
+![A screenshot of the home page](docs/fullscreen-tablet-landscape.png)
 
-- When users first load the page, a pop up window is displayed to
+- When users first load the page, the home page is displayed to
   - welcome the user and introduce the game
   - explain the purpose of the game
-  - and provide instructions
-
-![A screenshot of welcome pop up]()
-
-The Game
-
-- At the top of the page a header has a logo from Font Awesome and the Title of the Quiz.
+  - provide instructions
+  - begin the game with a start button
+  - the header and footer are a constant throughout, with Font Awesome icons
+  - the header has a tooth, setting the theme for the quiz
+  - and the foooter has links to LinkedIn and GitHub, which open in a new tab, incase anyone would like to find out more about me
 
 ![A screenshot of the header on a mobile device](docs/mobile-header.png)
+![A screenshot of the footer on a mobile device](docs/mobile-footer.png)
+
+The Game Page
+Again the header and footer appear, familiar to the user. On this page, the header is also an anchor tag, linking the user back to the home page.
 
 - The majority of the page is the Game Area, containing
   - a Question and Answer area with 3 multiple choice answers contained in buttons
@@ -141,21 +135,22 @@ The Game
 ![A screenshot](docs/mobile-question-area.png)
 
 - a Feedback area which tells the user if they got the question correct or incorrect and an explaination of the correct answer
+- if an incorrect answer is given then a window opens to warn the user that answer was not correct and a background container hides the quiz until the user closes the incorrect answer window
+  
+![A screenshot](docs/mobile-question-area.png)
+
+- if the user answers incorrectly, they cannot move onto the next question, becuase the aim of the game is to get information across. They have to keep trying until they find the right answer and get a short explaination
 - a Score area which keeps a tally of correct and incorrect answers
 
 ![A screenshot](docs/mobile-results-feedback-area.png)
 
-- At the bottom of the page a footer contains links to other pages with more information about me and other projects with icons from Font Awesome.
+- When the game finishes, another window gives the users final score and invites them to refresh the game.
 
-![A screenshot of the footer on a mobile device](docs/mobile-footer.png)
-
-- When the game finishes, another pop up window gives the users final score and invites them to refresh the game.
-
-![A screenshot of final pop up]()
+![A screenshot of final results]()
 
 ### Future Implementations
 
-- If time allowed, I would like to generate a random number sequence and integrate that into the code to choose a random question from the quiz so that the user can play a different game everytime and maintain interest.
+- If time allowed, I would like to have a progress bar displayed so the player could tell how many questions they had to go.
 - An 'easy', 'moderate' and 'difficult' mode would be helpful to make the game even more useful for people of different knowledge levels.
 
 ### Accessibility
@@ -231,7 +226,7 @@ Your live Github Pages site is now deployed at the URL shown.
 To fork the Cavity Prevention Quiz:
 
 1. Log in (or sign up) to Github.
-2. Go to the repository for this project, kellie-cat/portfolio_one_cats.
+2. Go to the repository for this project, kellie-cat/dental-quiz.
 3. Click the Fork button in the top right corner.
 
 #### How to Clone
@@ -261,6 +256,8 @@ CSS validation
 Many issues were discovered and resolved throughout the project.
 
 1. Trial and error and patience are key for JavaScript. Many times I tried many lines of code that did not work. I learned to just keep trying.
+2. I thought I had correctly programmed the correct and incorrect scores to increment... only to discover the incorrect score kept going up if the user clicked on the wrong answer again. I fixed this issue by disabling the incorrect buttons when they were tried once.
+3. I wanted to highlight the feedback area when it was given, and tried to add animation. This proved difficult as I am not familiar with JavaScript libraries and frameworks yet. I eventually settled on a simpler CSS animation.
 
 ### Known Bugs
 
@@ -271,15 +268,12 @@ There are no unfixed bugs on the Cavity Prevention Quiz.
 ### Code Used
 
 - [Kera Cudmore's README.md for the Bully Book Club](https://github.com/kera-cudmore/Bully-Book-Club)
-- Love Running inspired footer
+- [W3schools for the Fisher Yates Shuffle Method](https://w3schoolsua.github.io/js/js_array_sort_en.html#gsc.tab=0)
+- [Alvarotrigo for the CSS animation](https://alvarotrigo.com/blog/css-text-animations/)
 
 ### Content
 
 Content was written by Kellie McConnell BA BDentSc 2011 MFD 2013 MSc Advanced Minimum Intervention Dentistry 2020.
-
-### Media
-
-Photos were taken
 
 ### Acknowledgments
 
