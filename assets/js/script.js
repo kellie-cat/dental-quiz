@@ -242,15 +242,14 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("correct-result").innerHTML = finalCorrectScore + ` <i class="fa-solid fa-circle-check" style="color: #035E06"></i>`;
     document.getElementById("incorrect-result").innerHTML = finalIncorrectScore + ` <i class="fa-solid fa-circle-xmark" style="color: #cc0000"></i>`;
 
-    if (finalIncorrectScore <= 1) {
-      personalised.innerHTML = "Brilliant result! You know how to look after teeth!";
-    }
-    if (finalIncorrectScore > 1 <= 4) {
-      personalised.innerHTML = "Good work! You have a little bit to learn about teeth, why not play again!";
-    }
     if (finalIncorrectScore > 4) {
       personalised.innerHTML = "Good try but you could definitely learn some new tricks to keep teeth strong, try again!";
+    } else if (finalIncorrectScore > 2) {
+      personalised.innerHTML = "Good work! You have a little bit to learn about teeth, why not play again!";
+    } else {
+      personalised.innerHTML = "Brilliant result! You know how to look after teeth!";
     }
+
 
     feedbackBackground.classList.remove('hide');
     feedbackBackground.classList.add('flex');

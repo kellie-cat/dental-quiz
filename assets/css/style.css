@@ -118,7 +118,11 @@ header {
 }
 
 .question {
-  padding: 0.75rem;
+  padding: 0.75rem 0;
+}
+
+.multiple-choice-area h3 {
+  padding-left: 0.5rem;
 }
 
 .multiple-choice-area button {
@@ -182,7 +186,7 @@ button:disabled {
   opacity: 1;
   top: 12%;
   min-height: 300px;
-  height: 70vh;
+  height: 75vh;
   width: 85vw;
   background: #ffffff;
   border: 3px solid #012A6D;
@@ -190,8 +194,13 @@ button:disabled {
   color: #012A6D;
   left: 4%;
   padding: 0.5rem;
-  font-size: 1em;
+  font-size: 0.8em;
   text-align: center;
+}
+
+#personalised {
+  font-weight: bold;
+  color: #000000;
 }
 
 .close-modal,
@@ -219,15 +228,15 @@ button:disabled {
 
 .feedback-area {
   margin: 0 1% 1%;
-  padding: 1rem;
+  padding: 0.2rem 1rem;
   border: 2px solid #012A6D;
   border-radius: 4px;
-  min-height: 10vh;
+  min-height: 8vh;
   background-color: #F5faff;
 }
 
 #feedback {
-  padding: .5em 1em;
+  padding: .5em 0;
   z-index: 2;
   position: static;
 }
@@ -266,19 +275,17 @@ button:disabled {
 
 #reasons {
   font-size: 0.8em;
-  min-height: 2%;
 }
 
 .score-area {
   margin: 0 1% 1%;
-  padding: 0.5rem;
+  padding: 0.1rem;
   border: 2px solid #012A6D;
   border-radius: 4px;
   background: #F5faff;
   justify-content: space-evenly;
   flex-direction: column;
-  min-height: 10vh;
-  align-items: center;
+  min-height: 8vh;
 }
 
 .score-area i {
@@ -286,8 +293,8 @@ button:disabled {
 }
 
 .score {
-  padding: 0.2rem;
-  margin: 1rem;
+  padding: 0.1rem;
+  margin-left: 1rem;
 }
 
 .footer {
@@ -314,6 +321,8 @@ button:disabled {
 
   .score-area {
     flex-direction: row;
+    align-items: center;
+    min-height: 5vh;
   }
 }
 
