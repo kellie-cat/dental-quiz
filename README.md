@@ -8,6 +8,9 @@ However, there are some straightforward actions that we as indiviuals can take t
 
 [View The Cavity Prevention Quiz on Github Pages](https://kellie-cat.github.io/dental-quiz/)
 
+![GitHub contributors](https://img.shields.io/github/contributors/kellie-cat/dental-quiz)
+![GitHub top language](https://img.shields.io/github/languages/top/kellie-cat/dental-quiz)
+
 ---
 
 ## CONTENTS
@@ -138,7 +141,7 @@ On this page, the header is also an anchor tag, linking the user back to the hom
 
 ![A screenshot of the quiz page](docs/pp2-quiz-page-laptop.png)
 
-The majority of the page is the Game Area, containing
+The majority of the page is the Game Area, containing:
 
 - a Question and Answer area
   - with 3 multiple choice answers contained in buttons
@@ -174,9 +177,9 @@ The majority of the page is the Game Area, containing
 ### Future Implementations
 
 1. If time allowed, I would like to have a progress bar displayed so the player could tell how many questions they had to go.
-2. An 'easy', 'moderate' and 'difficult' mode would be helpful to make the game even more useful for people of different knowledge levels.
-3. Scrambling the order of the answers would also make the game more helpful for repeat users.
-4. Adding game sounds and animations would increase interest and novelty.
+2. An 'easy', 'moderate' and 'difficult' mode would be helpful to make the game even more useful for people of different knowledge levels. This could be achieved by creating another document for holding the data and separate arrays for easy, moderate and difficult questions.
+3. Scrambling the order of the answers would also make the game more helpful for repeat users. This could be achieved by calling the answers in a different way and again shuffling the order with the Fisher Yates Method.
+4. Adding game sounds and more exciting animations would increase interest and novelty.
 
 ### Accessibility
 
@@ -222,13 +225,17 @@ Google Chrome Development Tools - To test the code as I was writing it, and to t
 
 [Wave](https://wave.webaim.org/) - To evaluate accessibility.
 
-[Convertio](https://convertio.co/) - To convert images to webp format.
-
 [Favicon](https://favicon.io/) - To convert the favicon from an icon.
 
 [Am I Responsive?](https://ui.dev/amiresponsive) - To display the website on a range of screen sizes.
 
-[Shields](https://shields.io) - To display badges in this README.md document.
+[HTML validator](https://validator.w3.org/) - To validate HTML.
+
+[Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) - To validate CSS.
+
+[JavaScript validator](https://jshint.com/) - To validate JavaScript.
+
+[Shields](https://shields.io/) - To display the shield icons in this document.
 
 ## Deployment & Local Development
 
@@ -268,13 +275,20 @@ To clone the Cavity Prevention Quiz:
 
 The website was tested as it was built on Google Chrome using Google Devtools. It was designed with a mobile-first mindset and other screensizes were adjusted using media queries. Other browsers were tested.
 
-HTML validator was used to check all of the HTML and the CSS on the site.
+Once the website was complete, it was tested with Wave and Lighthouse for accessibility.
+
+![Lighthouse Home page](docs/pp2-lighthouse-home.png)
+![Lighthouse Quiz Page](docs/pp2-lighthouse-quiz.png)
+
+The relevant validators were used to check all of the HTML, CSS and JavaScript on the site.
 
 ![Home page](docs/html-validation-pp2.png)
-Home page validation
+HTML validation
 
 ![CSS](docs/css-validation-pp2.png)
 CSS validation
+
+JSHint showed one constant that had not been used, so this was removed.
 
 ### Resolved Bugs
 
