@@ -152,11 +152,11 @@ The majority of the page is the Game Area, containing:
 - a Feedback area which
   - tells the user if they got the question correct or incorrect
   - and when they answer correctly, an explaination of the correct answer appears
-  
+
 ![A screenshot of the feedback area](docs/pp2-feedback-correct.png)
 
 - if an incorrect answer is given then a window opens to warn the user that answer was not correct and a background container hides the quiz until the user closes the incorrect answer window
-  
+
 ![A screenshot of the incorrect window](docs/pp2-incorrect-window-mobile.png)
 
 - if the user answers incorrectly, they cannot move onto the next question, becuase the aim of the game is to get information across. They have to keep trying until they find the right answer and get a short explaination
