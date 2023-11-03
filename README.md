@@ -10,6 +10,7 @@ However, there are some straightforward actions that we as indiviuals can take t
 
 ![GitHub contributors](https://img.shields.io/github/contributors/kellie-cat/dental-quiz)
 ![GitHub top language](https://img.shields.io/github/languages/top/kellie-cat/dental-quiz)
+![GitHub last commit](https://img.shields.io/github/last-commit/kellie-cat/dental-quiz)
 
 ---
 
@@ -25,7 +26,7 @@ However, there are some straightforward actions that we as indiviuals can take t
   - [Design](#design)
     - [Colour Scheme](#colour-scheme)
     - [Typography](#typography)
-    - [Wireframes and Google Doc](#wireframes-and-google-doc)
+    - [Wireframes](#wireframes)
   - [Features](#features)
     - [General features](#general-features)
       - [The Welcome Page](#the-welcome-page)
@@ -106,10 +107,12 @@ A serif font gave some personality to the headings and added a feel of a traditi
 
 ![Screenshot of fonts](docs/fontpair-dental-quiz.png)
 
-### Wireframes and Google Doc
+### Wireframes
 
 ![Balsamiq wireframe trial for PP2](docs/balsamiq-wireframe-dental-quiz.png)
 Balsamiq wireframes were trialed to plan the project layout.
+
+I ended up changing the colours and layout to improve the aesthetics and usabilty of the site on mobile through to large monitor screen sizes and orientations. I realised there was no point in trying to force content into a small area.
 
 ## Features
 
@@ -176,10 +179,14 @@ The majority of the page is the Game Area, containing:
 
 ### Future Implementations
 
-1. If time allowed, I would like to have a progress bar displayed so the player could tell how many questions they had to go.
+This project meets the requirements and is ready to help many people learn about cavity prevention.
+If more resources opened up, I could add some additional features:
+
+1. A progress bar displayed so the player could tell how many questions they had to go.
 2. An 'easy', 'moderate' and 'difficult' mode would be helpful to make the game even more useful for people of different knowledge levels. This could be achieved by creating another document for holding the data and separate arrays for easy, moderate and difficult questions.
 3. Scrambling the order of the answers would also make the game more helpful for repeat users. This could be achieved by calling the answers in a different way and again shuffling the order with the Fisher Yates Method.
 4. Adding game sounds and more exciting animations would increase interest and novelty.
+5. Providing a link to a site such as [The Irish Dental Health Foundation](https://www.dentalhealth.ie/) or [Brush My Teeth](https://brushmyteeth.ie/) to signpost the users to more educational resources.
 
 ### Accessibility
 
@@ -284,21 +291,41 @@ Once the website was complete, it was tested with Wave and Lighthouse for access
 
 The relevant validators were used to check all of the HTML, CSS and JavaScript on the site.
 
-![Home page](docs/html-validation-pp2.png)
-HTML validation
+![Home Page](docs/html-validation-pp2.png)
+HTML validation for Home Page
+
+![QuizPage](docs/html-quiz-validation-pp2.png)
+HTML validation for Quiz Page
 
 ![CSS](docs/css-validation-pp2.png)
 CSS validation
 
 JSHint showed one constant that had not been used, so this was removed.
+Then it showed the following warning. As this was not an error, it was not resolved in this project, but it is something I will be conscious of in future.
+
+![JavaScript](docs/pp2-javascipt-validation.png)
+JavaScript validation and warning message
 
 ### Resolved Bugs
 
 Many issues were discovered and resolved throughout the project.
 
 1. Trial and error and patience are key for JavaScript. Many times I tried many lines of code that did not work. I learned to just keep trying.
-2. I thought I had correctly programmed the correct and incorrect scores to increment... only to discover the incorrect score kept going up if the user clicked on the wrong answer again. I fixed this issue by disabling the incorrect buttons when they were tried once.
-3. I wanted to highlight the feedback area when it was given, and tried to add animation. This proved difficult as I am not familiar with JavaScript libraries and frameworks yet. I eventually settled on a simpler CSS animation.
+2. Issue: I thought I had correctly programmed the correct and incorrect scores to increment... only to discover the incorrect score kept going up if the user clicked on the wrong answer again.
+   Cause: The answer buttons were still able to be clicked and the event listenter kept calling the relevant increment score functions when they were clicked.
+   Solution: I fixed this issue by disabling the incorrect buttons once they were pressed.
+3. Issue: I wanted to highlight the feedback area when it was given, and tried to add animation. This proved difficult as I am not familiar with JavaScript libraries and frameworks yet.
+   Cause: I am not familiar with frameworks and libraries yet and hope to learn more in the future.
+   Solution: I eventually settled on a simpler CSS animation and added JavaScript frameworks and libraries to my learning goals.
+4. Issue: The index.html page returned a JavaScript error during testing.
+   Cause: The index.html page does not have the relevant HTML elements for the JavaScript to run.
+   Solution: I used an If statement to set the JavaScript to only run on the quiz.html URL. This in turn caused an issue...
+5. Issue: The testing URL and the deployed URL are not the same! So the JavaScript did not run for testing if I set the URL as the deployed page.
+   Cause: Murphy's law.
+   Solution: I pushed the If statement to make sure it worked. Then commented it out until the final save. Which in turn caused another issue...
+6. Issue: The need to remember to uncomment the code at the final save.
+   Cause: My memory. Or lack of.
+   Solution: A reminder! A reminder handwritten in my notebook, in CAPS above the commented out code, on my wall calendar and in my phone calendar app! In amongst all the other reminders, this is a foolproof solution!
 
 ### Known Bugs
 
