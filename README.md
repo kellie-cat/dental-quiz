@@ -277,8 +277,10 @@ The website was tested as it was built on Google Chrome using Google Devtools. I
 
 Once the website was complete, it was tested with Wave and Lighthouse for accessibility.
 
-![Lighthouse Home page](docs/pp2-lighthouse-home.png)
-![Lighthouse Quiz Page](docs/pp2-lighthouse-quiz.png)
+![Lighthouse Home page on desktop](docs/pp2-lighthouse-index-desktop.png)
+![Lighthouse Home page on mobile](docs/pp2-lighthouse-index-mobile.png)
+![Lighthouse Quiz Page on desktop](docs/pp2-lighthouse-quiz-desktop.png)
+![Lighthouse Quiz Page on mobile](docs/pp2-lighthouse-quiz-mobile.png)
 
 The relevant validators were used to check all of the HTML, CSS and JavaScript on the site.
 
