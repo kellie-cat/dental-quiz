@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
   shuffleQuizData();
   loadQuestion();
 
-  for (var button of buttons) {
+  for (let button of buttons) {
     button.addEventListener('click', function () {
       /**
        *  Add active class (make button blue) to show the answer has been tried

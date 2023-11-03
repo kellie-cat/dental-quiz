@@ -2,7 +2,7 @@
 
 The Cavity Prevention Quiz is an educational game designed for people of all ages. An interactive quiz provides a learning experience for people to gain knowledge that can help them improve their oral health and maintain their smile.
 The World Health Organisation in 2019 said that dental decay was the most common health condition in the world. Oral diseases disproportionally affect the poor and socially disadvantaged members of society. To provide real and meaningful change, we need health care systems that properly address these inequalities.
-However, there are some straightforward actions that we as indiviuals can take that drastically reduce our risk of these problems. This resource is one way to spread the knowledge.
+However, there are some straightforward actions that we as individuals can take that drastically reduce our risk of these problems. This resource is one way to spread the knowledge.
 
 ![Screenshot of The Cavity Prevention Quiz on Am I Responsive](docs/am-i-responsive-dental-quiz.png)
 
@@ -53,7 +53,7 @@ However, there are some straightforward actions that we as indiviuals can take t
 
 ## User Experience (UX)
 
-The Cavity Prevention Quiz is an interactive learning game played on one screen. It was designed using a mobile-first mindset and is interactive on larger screen sizes.
+The Cavity Prevention Quiz is an interactive learning game played on one screen with elements that update to progress the game and give the user feedback. It was designed using a mobile-first mindset and is interactive on larger screen sizes.
 
 ### Key information for the site
 
@@ -140,7 +140,7 @@ The website has a landing page and a quiz page, built with a mobile-first mindse
 #### The Quiz Page
 
 Again the header and footer appear, familiar to the user.
-On this page, the header is also an anchor tag, linking the user back to the home page.
+On this page, the header is also an anchor tag, linking the user back to the home page, should they need to stop the game before it is finished.
 
 ![A screenshot of the quiz page](docs/pp2-quiz-page-laptop.png)
 
@@ -186,7 +186,7 @@ If more resources opened up, I could add some additional features:
 2. An 'easy', 'moderate' and 'difficult' mode would be helpful to make the game even more useful for people of different knowledge levels. This could be achieved by creating another document for holding the data and separate arrays for easy, moderate and difficult questions.
 3. Scrambling the order of the answers would also make the game more helpful for repeat users. This could be achieved by calling the answers in a different way and again shuffling the order with the Fisher Yates Method.
 4. Adding game sounds and more exciting animations would increase interest and novelty.
-5. Providing a link to a site such as [The Irish Dental Health Foundation](https://www.dentalhealth.ie/) or [Brush My Teeth](https://brushmyteeth.ie/) to signpost the users to more educational resources.
+5. Providing a link to sites such as [The Irish Dental Health Foundation](https://www.dentalhealth.ie/) or [Brush My Teeth](https://brushmyteeth.ie/) to signpost the users to more educational resources.
 
 ### Accessibility
 
@@ -304,7 +304,10 @@ JSHint showed one constant that had not been used, so this was removed.
 Then it showed the following warning. As this was not an error, it was not resolved in this project, but it is something I will be conscious of in future.
 
 ![JavaScript](docs/pp2-javascipt-validation.png)
-JavaScript validation and warning message
+JavaScript validation and one warning message:
+Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (currentQuestion, nextQuestion, loadQuestion, checkAnswer, alertFinal, reloadGame)
+
+I checked Google and Slack for solutions and it seems to be a common issue. Sadly there is no specific way to correct it. From this research, I did change the var keyword to a let keyword to be more inline with modern practices and to prevent unexpected results from global scope.
 
 ### Resolved Bugs
 
@@ -313,8 +316,8 @@ Many issues were discovered and resolved throughout the project.
 1. Trial and error and patience are key for JavaScript. Many times I tried many lines of code that did not work. I learned to just keep trying.
 2. Issue: I thought I had correctly programmed the correct and incorrect scores to increment... only to discover the incorrect score kept going up if the user clicked on the wrong answer again.
    Cause: The answer buttons were still able to be clicked and the event listenter kept calling the relevant increment score functions when they were clicked.
-   Solution: I fixed this issue by disabling the incorrect buttons once they were pressed.
-3. Issue: I wanted to highlight the feedback area when it was given, and tried to add animation. This proved difficult as I am not familiar with JavaScript libraries and frameworks yet.
+   Solution: I fixed this issue by disabling the incorrect buttons once they were pressed, when the next question button is pressed, all buttons become active again.
+3. Issue: I wanted to highlight the feedback area when it was given, and tried to add animation. This proved difficult.
    Cause: I am not familiar with frameworks and libraries yet and hope to learn more in the future.
    Solution: I eventually settled on a simpler CSS animation and added JavaScript frameworks and libraries to my learning goals.
 4. Issue: The index.html page returned a JavaScript error during testing.
