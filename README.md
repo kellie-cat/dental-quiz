@@ -4,7 +4,7 @@ The Cavity Prevention Quiz is an educational game designed for people of all age
 The World Health Organisation in 2019 said that dental decay was the most common health condition in the world. Oral diseases disproportionally affect the poor and socially disadvantaged members of society. To provide real and meaningful change, we need health care systems that properly address these inequalities.
 However, there are some straightforward actions that we as individuals can take that drastically reduce our risk of these problems. This resource is one way to spread the knowledge.
 
-![Screenshot of The Cavity Prevention Quiz on Am I Responsive](docs/am-i-responsive-dental-quiz.png)
+![Screenshot of The Cavity Prevention Quiz on Am I Responsive](docs/am-i-responsive-dental-quiz.png "The Cavity Prevention Quiz on Am I Responsive")
 
 [View The Cavity Prevention Quiz on Github Pages](https://kellie-cat.github.io/dental-quiz/)
 
@@ -89,12 +89,12 @@ The Cavity Prevention Quiz is an interactive learning game played on one screen 
 
 ### Colour Scheme
 
-![Coolors Colour Palette](docs/coolors-palette-pp2.png)
+![Coolors Colour Palette in blues and a dark pink](docs/coolors-palette-pp2.png "Coolors Colour Palette")
 
 Dental environments often use a colour scheme of blue and white to convey calmness and cleanliness, so I started with that idea and looked for a popular palette on [Coolors](https://coolors.co/) that had some contrasting colours to provide visual separation.
 However, I wanted a range of blues with enough lightness to provide contrast, and I wasn't finding any that I likes on the colour generators, so I made my own with [Art In Context](https://artincontext.org/color-palette-generator/).
 
-![Custom Colour Palette](docs/artincontext-colour-palette-pp2.png)
+![Custom Colour Palette with blues from navy to almost white and a purple](docs/artincontext-colour-palette-pp2.png "Custom Colour Palette")
 
 I then added some interest to the background with a pastel colour gradient.
 As the contrast was not ideal with the very pale blue, I changed this to white.
@@ -105,11 +105,11 @@ As the contrast was not ideal with the very pale blue, I changed this to white.
 I decided to use a sans-serif font for the majority of the text for accessibility for screens.
 A serif font gave some personality to the headings and added a feel of a traditional photo album.
 
-![Screenshot of fonts](docs/fontpair-dental-quiz.png)
+![Screenshot of fonts](docs/fontpair-dental-quiz.png "Screenshot of fonts")
 
 ### Wireframes
 
-![Balsamiq wireframe trial for PP2](docs/balsamiq-wireframe-dental-quiz.png)
+![A screenshot of Balsamiq wireframe trial for PP2](docs/balsamiq-wireframe-dental-quiz.png "Balsamiq wireframe trial for PP2")
 Balsamiq wireframes were trialed to plan the project layout.
 
 I ended up changing the colours and layout to improve the aesthetics and usabilty of the site on mobile through to large monitor screen sizes and orientations. I realised there was no point in trying to force content into a small area.
@@ -122,7 +122,7 @@ The website has a landing page and a quiz page, built with a mobile-first mindse
 
 #### The Welcome Page
 
-![A screenshot of the home page](docs/pp2-welcome-page-laptop.png)
+![A screenshot of the home page](docs/pp2-welcome-page-laptop.png "Screenshot of the home page")
 
 - When users first load the page, the home page is displayed to
   - welcome the user and introduce the game
@@ -133,16 +133,16 @@ The website has a landing page and a quiz page, built with a mobile-first mindse
   - the header has a tooth, setting the theme for the quiz
   - and the foooter has links to LinkedIn and GitHub, which open in a new tab, incase anyone would like to find out more about me
 
-![A screenshot of the header on a mobile device](docs/pp2-header-mobile.png)
+![A screenshot of the header on a mobile device](docs/pp2-header-mobile.png "Screenshot of the header on a mobile device")
 
-![A screenshot of the footer on a mobile device](docs/pp2-footer-mobile.png)
+![A screenshot of the footer on a mobile device](docs/pp2-footer-mobile.png "Screenshot of the footer on a mobile device")
 
 #### The Quiz Page
 
 Again the header and footer appear, familiar to the user.
 On this page, the header is also an anchor tag, linking the user back to the home page, should they need to stop the game before it is finished.
 
-![A screenshot of the quiz page](docs/pp2-quiz-page-laptop.png)
+![A screenshot of the quiz page](docs/pp2-quiz-page-laptop.png "Screenshot of the quiz page")
 
 The majority of the page is the Game Area, containing:
 
@@ -150,33 +150,33 @@ The majority of the page is the Game Area, containing:
   - with 3 multiple choice answers contained in buttons
   - a different coloured button to move to the next page
 
-![A screenshot of the question area](docs/pp2-question-area.png)
+![A screenshot of the question area](docs/pp2-question-area.png "Screenshot of the question area")
 
 - a Feedback area which
   - tells the user if they got the question correct or incorrect
   - and when they answer correctly, an explaination of the correct answer appears
 
-![A screenshot of the feedback area](docs/pp2-feedback-correct.png)
+![A screenshot of the feedback area](docs/pp2-feedback-correct.png "Screenshot of the feedback area")
 
 - if an incorrect answer is given then a window opens to warn the user that answer was not correct and a background container hides the quiz until the user closes the incorrect answer window
 
-![A screenshot of the incorrect window](docs/pp2-incorrect-window-mobile.png)
+![A screenshot of the incorrect window](docs/pp2-incorrect-window-mobile.png "Screenshot of the incorrect window")
 
 - if the user answers incorrectly, they cannot move onto the next question, becuase the aim of the game is to get information across. They have to keep trying until they find the right answer and get a short explaination
-- the incorrect answer also disables so they can't put the same wrong answer in twice by mistake, and this is highlighted to the user with a cursor change
+- the incorrect answer also disables so they can't put the same wrong answer in twice by mistake, and this is highlighted to the user with a cursor change and the answer that has already been tried remains highlighted
 
-![A screenshot of an incorrect answer highlighted](docs/pp2-game-area-laptop-incorrect.png)
+![A screenshot of an incorrect answer highlighted](docs/pp2-game-area-laptop-incorrect.png "Screenshot of an incorrect answer highlighted")
 
 - a Score area which keeps a tally of correct and incorrect answers
 
-![A screenshot of the score area](docs/pp2-score-area-tablet.png)
+![A screenshot of the score area](docs/pp2-score-area-tablet.png "Screenshot of the score area")
 
 - When the game finishes, another window opens to
   - give the users their final score
   - along with some personalised feedback
   - and invites them to refresh the game
 
-![A screenshot of final results](docs/pp2-final-result-mobile.png)
+![A screenshot of final results](docs/pp2-final-result-mobile.png "Screenshot of final results")
 
 ### Future Implementations
 
@@ -184,7 +184,7 @@ This project meets the requirements and is ready to help many people learn about
 If more resources opened up, I could add some additional features:
 
 1. A progress bar displayed so the player could tell how many questions they had to go.
-2. An 'easy', 'moderate' and 'difficult' mode would be helpful to make the game even more useful for people of different knowledge levels. This could be achieved by creating another document for holding the data and separate arrays for easy, moderate and difficult questions.
+2. An 'easy', 'moderate' and 'difficult' mode would be helpful to make the game even more useful for people of different knowledge levels. This could be achieved by creating another document for holding the data and separate arrays for easy, moderate and difficult questions. Hints could also be displayed in the Incorrect Answer pop up.
 3. Scrambling the order of the answers would also make the game more helpful for repeat users. This could be achieved by calling the answers in a different way and again shuffling the order with the Fisher Yates Method.
 4. Adding game sounds and more exciting animations would increase interest and novelty.
 5. Providing a link to sites such as [The Irish Dental Health Foundation](https://www.dentalhealth.ie/) or [Brush My Teeth](https://brushmyteeth.ie/) to signpost the users to more educational resources.
@@ -197,7 +197,7 @@ I have tried to be inclusive for everyone when coding this website by
 
 - The EightShapes Contrast Grid was helpful with matching background and text colours with good contrast and making sure text is an appropriate size on all types of screen.
 
-![Colour Grid screenshot](docs/contrast-grid-pp2.png)
+![Colour Grid screenshot](docs/contrast-grid-pp2.png "Colour Grid screenshot")
 
 - Using semantic HTML as much as possible.
 
@@ -285,29 +285,30 @@ The website was tested as it was built on Google Chrome using Google Devtools. I
 
 Once the website was complete, it was tested with Wave and Lighthouse for accessibility.
 
+Lighthouse Home page on desktop
 ![Lighthouse Home page on desktop](docs/pp2-lighthouse-index-desktop.png "Lighthouse Home page on desktop")
 
+Lighthouse Home page on mobile
 ![Lighthouse Home page on mobile](docs/pp2-lighthouse-index-mobile.png "Lighthouse Home page on mobile")
 
+Lighthouse Quiz Page on desktop
 ![Lighthouse Quiz Page on desktop](docs/pp2-lighthouse-quiz-desktop.png "Lighthouse Quiz Page on desktop")
 
+Lighthouse Quiz Page on mobile
 ![Lighthouse Quiz Page on mobile](docs/pp2-lighthouse-quiz-mobile.png "Lighthouse Quiz Page on mobile")
 
 The relevant validators were used to check all of the HTML, CSS and JavaScript on the site.
 
-![Home Page](docs/html-validation-pp2.png "HTML validation for Home Page")
+![Home Page HTML validation](docs/html-validation-pp2.png "HTML validation for Home Page")
 
-![QuizPage](docs/html-quiz-validation-pp2.png "HTML validation for Quiz Page")
+![Quiz Page HTML validation](docs/html-quiz-validation-pp2.png "HTML validation for Quiz Page")
 
-![CSS](docs/css-validation-pp2.png "CSS validation")
+![CSS validation](docs/css-validation-pp2.png "CSS validation")
 
-![JavaScript](docs/pp2-javascipt-validation.png "JavaScript validation")
+![JavaScript validation](docs/pp2-javascript-validation.png "JavaScript validation")
 
 JSHint showed one constant that had not been used, so this was removed.
 Then it showed the following warning. As this was not an error, it was not resolved in this project, but it is something I will be conscious of in future.
-
-JSHint warning:
-Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (currentQuestion, nextQuestion, loadQuestion, checkAnswer, alertFinal, reloadGame)
 
 I checked Google and Slack for solutions and it seems to be a common issue. Sadly there is no specific way to correct it. From this research, I did change the var keyword to a let keyword to be more inline with modern practices and to prevent unexpected results from global scope.
 
