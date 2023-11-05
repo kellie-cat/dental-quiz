@@ -19,6 +19,7 @@ To hide and reveal modals as called
   display: none;
 }
 
+/* General Page Styles */
 .body-area {
   background: linear-gradient(to bottom right, #aadaff, #dbdeff, #e8d6fb);
   background-repeat: no-repeat;
@@ -32,6 +33,7 @@ To hide and reveal modals as called
   font-size: 100%;
 }
 
+/* Header Styles */
 header {
   background: #ffffff;
   z-index: 99;
@@ -53,6 +55,7 @@ header {
   color: inherit;
 }
 
+/* Main Styling */
 #quiz-area {
   flex: 1 0 auto;
   flex-direction: column;
@@ -144,7 +147,6 @@ header {
 
 .disabled {
   cursor: not-allowed;
-  /* pointer-events: none;*/
 }
 
 .next-question {
@@ -168,6 +170,7 @@ header {
   color: #ffffff;
 }
 
+/* Disable and grey out background behind incorrect feedback and final result modal */
 #feedback-background {
   position: fixed;
   top: 0;
@@ -294,6 +297,7 @@ header {
   margin-left: 1rem;
 }
 
+/* Footer Styles */
 .footer {
   background: #ffffff;
   font-size: 2em;
@@ -307,7 +311,9 @@ header {
   flex-direction: row;
 }
 
-/* Small mobiles */
+/* Media queries */
+
+/* Small mobiles landscape (500px and up) */
 @media (min-width: 500px) {
   .multiple-choice-area {
     display: flex;
@@ -389,7 +395,7 @@ header {
   }
 }
 
-/* Super large devices (monitors, 2500px and up) */
+/* Super large devices (XL monitors, 2500px and up) */
 @media (min-width: 2500px) {
   .body-area {
     font-size: 3rem;
