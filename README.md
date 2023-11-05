@@ -89,12 +89,12 @@ The Cavity Prevention Quiz is an interactive learning game played on one screen 
 
 ### Colour Scheme
 
-![image](docs/coolors-palette-pp2.png)
+![Coolors Colour Palette](docs/coolors-palette-pp2.png)
 
 Dental environments often use a colour scheme of blue and white to convey calmness and cleanliness, so I started with that idea and looked for a popular palette on [Coolors](https://coolors.co/) that had some contrasting colours to provide visual separation.
 However, I wanted a range of blues with enough lightness to provide contrast, and I wasn't finding any that I likes on the colour generators, so I made my own with [Art In Context](https://artincontext.org/color-palette-generator/).
 
-![image](docs/artincontext-colour-palette-pp2.png)
+![Custom Colour Palette](docs/artincontext-colour-palette-pp2.png)
 
 I then added some interest to the background with a pastel colour gradient.
 As the contrast was not ideal with the very pale blue, I changed this to white.
@@ -163,6 +163,7 @@ The majority of the page is the Game Area, containing:
 ![A screenshot of the incorrect window](docs/pp2-incorrect-window-mobile.png)
 
 - if the user answers incorrectly, they cannot move onto the next question, becuase the aim of the game is to get information across. They have to keep trying until they find the right answer and get a short explaination
+- the incorrect answer also disables so they can't put the same wrong answer in twice by mistake, and this is highlighted to the user with a cursor change
 
 ![A screenshot of an incorrect answer highlighted](docs/pp2-game-area-laptop-incorrect.png)
 
@@ -284,27 +285,28 @@ The website was tested as it was built on Google Chrome using Google Devtools. I
 
 Once the website was complete, it was tested with Wave and Lighthouse for accessibility.
 
-![Lighthouse Home page on desktop](docs/pp2-lighthouse-index-desktop.png)
-![Lighthouse Home page on mobile](docs/pp2-lighthouse-index-mobile.png)
-![Lighthouse Quiz Page on desktop](docs/pp2-lighthouse-quiz-desktop.png)
-![Lighthouse Quiz Page on mobile](docs/pp2-lighthouse-quiz-mobile.png)
+![Lighthouse Home page on desktop](docs/pp2-lighthouse-index-desktop.png "Lighthouse Home page on desktop")
+
+![Lighthouse Home page on mobile](docs/pp2-lighthouse-index-mobile.png "Lighthouse Home page on mobile")
+
+![Lighthouse Quiz Page on desktop](docs/pp2-lighthouse-quiz-desktop.png "Lighthouse Quiz Page on desktop")
+
+![Lighthouse Quiz Page on mobile](docs/pp2-lighthouse-quiz-mobile.png "Lighthouse Quiz Page on mobile")
 
 The relevant validators were used to check all of the HTML, CSS and JavaScript on the site.
 
-![Home Page](docs/html-validation-pp2.png)
-HTML validation for Home Page
+![Home Page](docs/html-validation-pp2.png "HTML validation for Home Page")
 
-![QuizPage](docs/html-quiz-validation-pp2.png)
-HTML validation for Quiz Page
+![QuizPage](docs/html-quiz-validation-pp2.png "HTML validation for Quiz Page")
 
-![CSS](docs/css-validation-pp2.png)
-CSS validation
+![CSS](docs/css-validation-pp2.png "CSS validation")
+
+![JavaScript](docs/pp2-javascipt-validation.png "JavaScript validation")
 
 JSHint showed one constant that had not been used, so this was removed.
 Then it showed the following warning. As this was not an error, it was not resolved in this project, but it is something I will be conscious of in future.
 
-![JavaScript](docs/pp2-javascipt-validation.png)
-JavaScript validation and one warning message:
+JSHint warning:
 Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (currentQuestion, nextQuestion, loadQuestion, checkAnswer, alertFinal, reloadGame)
 
 I checked Google and Slack for solutions and it seems to be a common issue. Sadly there is no specific way to correct it. From this research, I did change the var keyword to a let keyword to be more inline with modern practices and to prevent unexpected results from global scope.
@@ -314,21 +316,24 @@ I checked Google and Slack for solutions and it seems to be a common issue. Sadl
 Many issues were discovered and resolved throughout the project.
 
 1. Trial and error and patience are key for JavaScript. Many times I tried many lines of code that did not work. I learned to just keep trying.
-2. Issue: I thought I had correctly programmed the correct and incorrect scores to increment... only to discover the incorrect score kept going up if the user clicked on the wrong answer again.
-   Cause: The answer buttons were still able to be clicked and the event listenter kept calling the relevant increment score functions when they were clicked.
-   Solution: I fixed this issue by disabling the incorrect buttons once they were pressed, when the next question button is pressed, all buttons become active again.
-3. Issue: I wanted to highlight the feedback area when it was given, and tried to add animation. This proved difficult.
-   Cause: I am not familiar with frameworks and libraries yet and hope to learn more in the future.
-   Solution: I eventually settled on a simpler CSS animation and added JavaScript frameworks and libraries to my learning goals.
-4. Issue: The index.html page returned a JavaScript error during testing.
-   Cause: The index.html page does not have the relevant HTML elements for the JavaScript to run.
-   Solution: I used an If statement to set the JavaScript to only run on the quiz.html URL. This in turn caused an issue...
-5. Issue: The testing URL and the deployed URL are not the same! So the JavaScript did not run for testing if I set the URL as the deployed page.
-   Cause: Murphy's law.
-   Solution: I pushed the If statement to make sure it worked. Then commented it out until the final save. Which in turn caused another issue...
-6. Issue: The need to remember to uncomment the code at the final save.
-   Cause: My memory. Or lack of.
-   Solution: A reminder! A reminder handwritten in my notebook, in CAPS above the commented out code, on my wall calendar and in my phone calendar app! In amongst all the other reminders, this is a foolproof solution!
+2. **Issue**: I thought I had correctly programmed the correct and incorrect scores to increment... only to discover the incorrect score kept going up if the user clicked on the wrong answer again.  
+   **Cause**: The answer buttons were still able to be clicked and the event listenter kept calling the relevant increment score functions when they were clicked.  
+   **Solution**: I fixed this issue by disabling the incorrect buttons once they were pressed, when the next question button is pressed, all buttons become active again.
+3. **Issue**: I wanted to highlight the feedback area when it was given, and tried to add animation. This proved difficult.  
+   **Cause**: I am not familiar with frameworks and libraries yet and hope to learn more in the future.  
+   **Solution**: I eventually settled on a simpler CSS animation and added JavaScript frameworks and libraries to my learning goals.
+4. **Issue**: The index.html page returned a JavaScript error during testing.  
+   **Cause**: The index.html page does not have the relevant HTML elements for the JavaScript to run.  
+   **Solution**: I used an If statement to set the JavaScript to only run on the quiz.html URL. This in turn caused an issue...
+5. **Issue**: The testing URL and the deployed URL are not the same! So the JavaScript did not run for testing if I set the URL as the deployed page.  
+   **Cause**: Murphy's law.  
+   **Solution**: I pushed the If statement to make sure it worked. Then commented it out until the final save. Which in turn caused another issue...
+6. **Issue**: The need to remember to uncomment the code at the final save.  
+   **Cause**: My memory. Or lack of.  
+   **Solution**: A reminder! A reminder handwritten in my notebook, in CAPS above the commented out code, on my wall calendar and in my phone calendar app! In amongst all the other reminders, this is a foolproof solution!
+7. **Issue**: The disabling of the already tried incorrect answers was inconsistent.  
+   **Cause**: After much testing, I worked out that the function disableIncorrectRef which called elements by class name 'active', only worked on the first element it found with the class name active. So if I clicked the 3rd button 1st, it was disabled, and either of the 1st or 2nd would also be correctly disabled. However, if the 1st button was clicked and disabled, then the 2nd or 3rd buttons would remain active.  
+   **Solution**: I tried to add 'disabled' as a class and then set pointer-events: none. However this was not ideal, as it also meant the cursor: not-allowed effect did not work. I decided to add an attribute of disabled to the button with the event listener. This was already removed by the nextQuestion function.
 
 ### Known Bugs
 
@@ -340,7 +345,7 @@ There are no unfixed bugs on the Cavity Prevention Quiz.
 
 - [Kera Cudmore's README.md for the Bully Book Club](https://github.com/kera-cudmore/Bully-Book-Club)
 - [W3schools for the Fisher Yates Shuffle Method](https://w3schoolsua.github.io/js/js_array_sort_en.html#gsc.tab=0)
-- [Alvarotrigo for the CSS animation](https://alvarotrigo.com/blog/css-text-animations/)
+- [Alvaro Trigo for the CSS animation](https://alvarotrigo.com/blog/css-text-animations/)
 
 ### Content
 
