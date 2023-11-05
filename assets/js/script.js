@@ -73,196 +73,195 @@ const quizData = [
   },
 ];
 
-// REMOVE COMMENT and // at end before submit
-// if (window.location.href === ("https://kellie-cat.github.io/dental-quiz/quiz.html")) {
-document.addEventListener('DOMContentLoaded', function () {
-  let buttons = document.getElementsByTagName('button');
-  let currentQuestion = 0;
-  shuffleQuizData();
-  loadQuestion();
+if (window.location.href === ("https://kellie-cat.github.io/dental-quiz/quiz.html")) {
+  document.addEventListener('DOMContentLoaded', function () {
+    let buttons = document.getElementsByTagName('button');
+    let currentQuestion = 0;
+    shuffleQuizData();
+    loadQuestion();
 
-  for (let button of buttons) {
-    button.addEventListener('click', function () {
-      /**
-       *  Add active class (make button blue) to show the answer has been tried, and
-       * disable incorrect answers so the incorrect score doesn't increment
-       */
-      if (this.getAttribute('data-answer')) {
-        this.classList.add('active', 'disabled');
-        this.setAttribute("disabled", "");
-      }
-      if (this.getAttribute('data-type') === 'next' && currentQuestion <= 9) {
-        nextQuestion();
-        loadQuestion();
-      }
-      switch (this.getAttribute('data-answer')) {
-        case "0":
-          checkAnswer(0);
-          break;
-        case "1":
-          checkAnswer(1);
-          break;
-        case "2":
-          checkAnswer(2);
-          break;
-        default:
-          break;
-      }
-      /**
-       * closes incorrectModal when user clicks 'Try Again'
-       */
-      if (this.getAttribute('data-type') === 'close') {
-        feedbackBackground.classList.remove('flex');
-        feedbackBackground.classList.add('hide');
-        incorrectModal.classList.remove('flex');
-        incorrectModal.classList.add('hide');
-      }
-      if (this.getAttribute('data-type') === 'next' && currentQuestion >= 9) {
-        btnNextRef.innerHTML = "Finish the Game!";
-      }
-      if (this.getAttribute('data-type') === 'next' && currentQuestion >= 10) {
-        alertFinal();
-      }
-      if (this.getAttribute('data-type') === 'game') {
-        reloadGame();
-      }
-    });
-  }
-
-  /**
-   * Checks the users answer,
-   * gives feedback and, if correct, rationale, if incorrect, an alert,
-   * increments the correct or incorrect scores,
-   * if incorrect then shows incorrect Modal, if correct
-   * moves onto the next question in the quizData array
-   */
-  function checkAnswer(selected) {
-    if (selected === quizData[currentQuestion].correct) {
-      feedback.innerHTML = `
-      <i class="fa-solid fa-circle-check pop-outin" style="color: #035E06"> Correct!</i >
-      `;
-      reason.innerHTML = `${quizData[currentQuestion].reason}`;
-      incrementCorrectScore();
-      currentQuestion += 1;
-      disableAnswersRef();
-    } else {
-      feedback.innerHTML = `
-      <i class="fa-solid fa-circle-xmark" style="color: #cc0000"> Incorrect!</i>
-      `;
-      incrementIncorrectScore();
-      showIncorrectModal();
+    for (let button of buttons) {
+      button.addEventListener('click', function () {
+        /**
+         *  Add active class (make button blue) to show the answer has been tried, and
+         * disable incorrect answers so the incorrect score doesn't increment
+         */
+        if (this.getAttribute('data-answer')) {
+          this.classList.add('active', 'disabled');
+          this.setAttribute("disabled", "");
+        }
+        if (this.getAttribute('data-type') === 'next' && currentQuestion <= 9) {
+          nextQuestion();
+          loadQuestion();
+        }
+        switch (this.getAttribute('data-answer')) {
+          case "0":
+            checkAnswer(0);
+            break;
+          case "1":
+            checkAnswer(1);
+            break;
+          case "2":
+            checkAnswer(2);
+            break;
+          default:
+            break;
+        }
+        /**
+         * closes incorrectModal when user clicks 'Try Again'
+         */
+        if (this.getAttribute('data-type') === 'close') {
+          feedbackBackground.classList.remove('flex');
+          feedbackBackground.classList.add('hide');
+          incorrectModal.classList.remove('flex');
+          incorrectModal.classList.add('hide');
+        }
+        if (this.getAttribute('data-type') === 'next' && currentQuestion >= 9) {
+          btnNextRef.innerHTML = "Finish the Game!";
+        }
+        if (this.getAttribute('data-type') === 'next' && currentQuestion >= 10) {
+          alertFinal();
+        }
+        if (this.getAttribute('data-type') === 'game') {
+          reloadGame();
+        }
+      });
     }
-  }
-
-  /**
-   * Shuffles the quizData array to make the quiz more enjoyable for returning users
-   */
-  function shuffleQuizData() {
-    for (let i = quizData.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
-      let k = quizData[i];
-      quizData[i] = quizData[j];
-      quizData[j] = k;
-    }
-  }
-
-  /**
-  * Loads the questions and answers from quizData
-  * */
-  function loadQuestion() {
-    questionText.innerHTML = quizData[currentQuestion].question;
-    btnOneRef.innerHTML = quizData[currentQuestion].options[0];
-    btnTwoRef.innerHTML = quizData[currentQuestion].options[1];
-    btnThreeRef.innerHTML = quizData[currentQuestion].options[2];
-  }
-
-  /**
-   * Disables the answer buttons so they can't duplicate answers
-   */
-  function disableAnswersRef() {
-    btnOneRef.disabled = true;
-    btnTwoRef.disabled = true;
-    btnThreeRef.disabled = true;
-  }
-
-  /** Gets the previous correct score from the DOM, increments it
-   * by one and displays the new score
-   */
-  function incrementCorrectScore() {
-    let previousScore = parseInt(document.getElementById("correct-score").innerText);
-    document.getElementById("correct-score").innerText = ++previousScore;
-  }
-
-  /** Gets the previous incorrect score from the DOM, increments it
-   * by one and displays the new score
-   */
-  function incrementIncorrectScore() {
-    let previousIncorrectScore = parseInt(document.getElementById("incorrect-score").innerText);
-    document.getElementById("incorrect-score").innerText = ++previousIncorrectScore;
-  }
-
-  /** Shows a modal when an incorrect answer is given so the
-   * user knows to try again
-     */
-  function showIncorrectModal() {
-    feedbackBackground.classList.remove('hide');
-    feedbackBackground.classList.add('flex');
-    incorrectModal.classList.remove('hide');
-    incorrectModal.classList.add('flex');
-  }
-
-  /**
-   * Refreshes the feedback and explanation text for the next question and then
-   * loads the next question text and answer options from the quizData
-   * array, and removed active class from buttons to deselect
-   */
-  function nextQuestion() {
-    feedback.innerHTML = "Click an answer to see your result";
-    reason.innerHTML = " ";
-    btnOneRef.disabled = false;
-    btnTwoRef.disabled = false;
-    btnThreeRef.disabled = false;
-    btnOneRef.classList.remove('active', 'disabled');
-    btnTwoRef.classList.remove('active', 'disabled');
-    btnThreeRef.classList.remove('active', 'disabled');
-  }
-
-  /**
-    * Shows the final result modal and invites the user to play again
-    * or go back to the home page
-    */
-  function alertFinal() {
-    let finalCorrectScore = parseInt(document.getElementById("correct-score").innerText);
-    let finalIncorrectScore = parseInt(document.getElementById("incorrect-score").innerText);
-    let personalised = document.getElementById("personalised");
-
-    document.getElementById("correct-result").innerHTML = finalCorrectScore + ` <i class="fa-solid fa-circle-check" style="color: #035E06"></i>`;
-    document.getElementById("incorrect-result").innerHTML = finalIncorrectScore + ` <i class="fa-solid fa-circle-xmark" style="color: #cc0000"></i>`;
 
     /**
-     * Personalised feedback
+     * Checks the users answer,
+     * gives feedback and, if correct, rationale, if incorrect, an alert,
+     * increments the correct or incorrect scores,
+     * if incorrect then shows incorrect Modal, if correct
+     * moves onto the next question in the quizData array
      */
-    if (finalIncorrectScore > 4) {
-      personalised.innerHTML = "Good try but you could definitely learn some new tricks to keep teeth strong, try again!";
-    } else if (finalIncorrectScore > 2) {
-      personalised.innerHTML = "Good work! You have a little bit to learn about teeth, why not play again!";
-    } else {
-      personalised.innerHTML = "Brilliant result! You know how to look after teeth!";
+    function checkAnswer(selected) {
+      if (selected === quizData[currentQuestion].correct) {
+        feedback.innerHTML = `
+      <i class="fa-solid fa-circle-check pop-outin" style="color: #035E06"> Correct!</i >
+      `;
+        reason.innerHTML = `${quizData[currentQuestion].reason}`;
+        incrementCorrectScore();
+        currentQuestion += 1;
+        disableAnswersRef();
+      } else {
+        feedback.innerHTML = `
+      <i class="fa-solid fa-circle-xmark" style="color: #cc0000"> Incorrect!</i>
+      `;
+        incrementIncorrectScore();
+        showIncorrectModal();
+      }
     }
 
-    feedbackBackground.classList.remove('hide');
-    feedbackBackground.classList.add('flex');
-    finalResult.classList.remove('hide');
-    finalResult.classList.add('flex');
-  }
+    /**
+     * Shuffles the quizData array to make the quiz more enjoyable for returning users
+     */
+    function shuffleQuizData() {
+      for (let i = quizData.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        let k = quizData[i];
+        quizData[i] = quizData[j];
+        quizData[j] = k;
+      }
+    }
 
-  /**
-   * Gets final score data from document and displays the final result
-   * in a pop up. When the pop up is acknowledged by the user, the
-   * quiz refreshes
-   */
-  function reloadGame() {
-    location.reload();
-  }
-});
-//}
+    /**
+    * Loads the questions and answers from quizData
+    * */
+    function loadQuestion() {
+      questionText.innerHTML = quizData[currentQuestion].question;
+      btnOneRef.innerHTML = quizData[currentQuestion].options[0];
+      btnTwoRef.innerHTML = quizData[currentQuestion].options[1];
+      btnThreeRef.innerHTML = quizData[currentQuestion].options[2];
+    }
+
+    /**
+     * Disables the answer buttons so they can't duplicate answers
+     */
+    function disableAnswersRef() {
+      btnOneRef.disabled = true;
+      btnTwoRef.disabled = true;
+      btnThreeRef.disabled = true;
+    }
+
+    /** Gets the previous correct score from the DOM, increments it
+     * by one and displays the new score
+     */
+    function incrementCorrectScore() {
+      let previousScore = parseInt(document.getElementById("correct-score").innerText);
+      document.getElementById("correct-score").innerText = ++previousScore;
+    }
+
+    /** Gets the previous incorrect score from the DOM, increments it
+     * by one and displays the new score
+     */
+    function incrementIncorrectScore() {
+      let previousIncorrectScore = parseInt(document.getElementById("incorrect-score").innerText);
+      document.getElementById("incorrect-score").innerText = ++previousIncorrectScore;
+    }
+
+    /** Shows a modal when an incorrect answer is given so the
+     * user knows to try again
+       */
+    function showIncorrectModal() {
+      feedbackBackground.classList.remove('hide');
+      feedbackBackground.classList.add('flex');
+      incorrectModal.classList.remove('hide');
+      incorrectModal.classList.add('flex');
+    }
+
+    /**
+     * Refreshes the feedback and explanation text for the next question and then
+     * loads the next question text and answer options from the quizData
+     * array, and removed active class from buttons to deselect
+     */
+    function nextQuestion() {
+      feedback.innerHTML = "Click an answer to see your result";
+      reason.innerHTML = " ";
+      btnOneRef.disabled = false;
+      btnTwoRef.disabled = false;
+      btnThreeRef.disabled = false;
+      btnOneRef.classList.remove('active', 'disabled');
+      btnTwoRef.classList.remove('active', 'disabled');
+      btnThreeRef.classList.remove('active', 'disabled');
+    }
+
+    /**
+      * Shows the final result modal and invites the user to play again
+      * or go back to the home page
+      */
+    function alertFinal() {
+      let finalCorrectScore = parseInt(document.getElementById("correct-score").innerText);
+      let finalIncorrectScore = parseInt(document.getElementById("incorrect-score").innerText);
+      let personalised = document.getElementById("personalised");
+
+      document.getElementById("correct-result").innerHTML = finalCorrectScore + ` <i class="fa-solid fa-circle-check" style="color: #035E06"></i>`;
+      document.getElementById("incorrect-result").innerHTML = finalIncorrectScore + ` <i class="fa-solid fa-circle-xmark" style="color: #cc0000"></i>`;
+
+      /**
+       * Personalised feedback
+       */
+      if (finalIncorrectScore > 4) {
+        personalised.innerHTML = "Good try but you could definitely learn some new tricks to keep teeth strong, try again!";
+      } else if (finalIncorrectScore > 2) {
+        personalised.innerHTML = "Good work! You have a little bit to learn about teeth, why not play again!";
+      } else {
+        personalised.innerHTML = "Brilliant result! You know how to look after teeth!";
+      }
+
+      feedbackBackground.classList.remove('hide');
+      feedbackBackground.classList.add('flex');
+      finalResult.classList.remove('hide');
+      finalResult.classList.add('flex');
+    }
+
+    /**
+     * Gets final score data from document and displays the final result
+     * in a pop up. When the pop up is acknowledged by the user, the
+     * quiz refreshes
+     */
+    function reloadGame() {
+      location.reload();
+    }
+  });
+}
